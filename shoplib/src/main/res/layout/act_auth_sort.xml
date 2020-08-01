@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+
+    <TextView
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:background="@color/main_color_bg"
+        android:padding="16dp"
+        android:textSize="12sp"
+        android:text="选择认证后，不可更改，请慎重选择"
+        android:textColor="@color/main_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

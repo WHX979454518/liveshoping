@@ -1,0 +1,132 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+def config = rootProject.ext
+android {
+    signingConfigs {
+
+        signconfig {
+            keyAlias 'dianyidian'
+            keyPassword '123456'
+            storeFile file('dianyidian.jks')
+            storePassword '123456'
+        }
+        /* debug {
+            //keystore中key的别名
+            keyAlias 'fireBird'
+            //keystore中key的密码
+            keyPassword 'hotbird20171008'
+            //keystore的文件路径，可以是绝对路径也可以是相对路径
+            storeFile file('fireBird.jks')
+            //keystore的密码
+            storePassword 'hotbird20171008'
+        }*/
+    }
+    compileSdkVersion config.compileSdkVersion
+    defaultConfig {
+        applicationId config.applicationId
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        ndk {
+            abiFilters "armeabi-v7a" ,"x86"
+        }
+
+        //Arouter 路由框架配置，用于在module之内、或不同module之间进行跳转
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: config.applicationId,
+                JPUSH_APPKEY : "c9ff5a9f9204e27fbefdf00d", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            resValue "string", "app_name", config.appName
+            minifyEnabled false
+            crunchPngs false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signconfig
+
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            resValue "string", "app_name", config.appName
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signconfig
+        }
+    }
+
+    //对生成的apk文件的名字和路径改到其他地方
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+
+            outputFileName = "${config.apkName}_${variant.buildType.name}_${releaseTime()}_V${variant.versionName}.apk"
+            //直接打release包到直播商城项目资料存储文件夹
+//            if (variant.buildType.name == "release") {
+//                variant.getPackageApplication().outputDirectory = new File("\\\\192.168.1.236\\共享\\直播商城项目\\项目android安装包")
+//            }
+        }
+    }
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+        lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        pickFirst 'lib/armeabi-v7a/libliteavsdk.so'
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+}
+
+//返回时间
+def releaseTime() {
+    return new Date().format("yyyy_MMdd_HHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //路由框架 用于在module之内、或不同module之间进行跳转    若只有一个模块可以不采用此种方式
+    implementation config.arouter
+    annotationProcessor config.areoutetCompile
+    annotationProcessor rootProject.ext.butterknifeCompiler
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.android.support:design:25.3.1'
+    implementation project(':hnlivelibrary')
+    implementation project(':nicevideoplayer')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation config.cardViews
+
+
+    implementation 'fm.jiecao:jiecaovideoplayer:5.5.2'
+
+//    implementation 'com.github.bumptech.glide:glide:4.0.0'
+}

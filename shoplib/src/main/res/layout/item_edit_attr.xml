@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:layout_gravity="center"
+    android:layout_marginRight="12dp"
+    android:layout_marginLeft="8dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="颜色"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_soild_gray_4as"
+        android:textColor="@color/comm_text_color_black_hs"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp" />
+
+    <ImageView
+        android:id="@+id/mIvDel"
+        android:layout_width="wrap_content"
+        android:layout_alignRight="@+id/mTvTag"
+        android:layout_marginRight="-5dp"
+        android:layout_height="wrap_content"
+        android:onClick="onStoreEditClick"
+        android:src="@drawable/delete_picture"/>
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    tools:showIn="@layout/frag_user">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/address_rl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/paddress_tv"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@mipmap/main_address"
+            android:text="我的地址"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/addressNum"
+            style="@style/user_item_shop_num" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/customer_service_rl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/platform_tell_server"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/platform_tell_server"
+            android:text="平台客服"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitPayNum"
+            style="@style/user_item_shop_num" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hotline_rl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/platform_hot_line"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/platform_hot_line"
+            android:text="平台热线"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitDeliverNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mhelp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/help_center"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/help_center"
+            android:text="帮助中心"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitGetNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/feedback_rl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/report_and_advice"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/report_and_advice"
+            android:text="举报与建议"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvEvaluateNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/about_rl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/about_us"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/about_us"
+            android:text="关于我们"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvRefundNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+
+</LinearLayout>

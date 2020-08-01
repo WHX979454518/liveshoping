@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hn.library.loadstate.HnLoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLoadingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:isFirstVisible="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/item_bg_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/design_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/design_margin"
+                android:layout_marginRight="@dimen/design_margin"
+                android:singleLine="false"
+                android:text="@string/now_live_type"
+                android:textColor="@color/comm_text_color_black" />
+
+            <RadioGroup
+                android:id="@+id/mRG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mRb1"
+                    style="@style/comm_text"
+                    android:layout_width="74dp"
+                    android:layout_height="@dimen/dp_24"
+                    android:background="@drawable/select_choose_live_type_chose"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textColor="@drawable/select_black_black_s_color_check"
+                    android:gravity="center"
+                    android:textSize="@dimen/comm_text_size_s"
+                    android:text="娱乐直播" />
+
+                <RadioButton
+                    android:id="@+id/mRb2"
+                    style="@style/comm_text"
+                    android:layout_width="74dp"
+                    android:layout_height="@dimen/dp_24"
+                    android:textSize="@dimen/comm_text_size_s"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:background="@drawable/select_choose_live_type_chose"
+                    android:button="@null"
+                    android:textColor="@drawable/select_black_black_s_color_check"
+                    android:gravity="center"
+                    android:text="游戏直播" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/mTvNowType"
+                style="@style/comm_text"
+                android:singleLine="false"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/design_margin"
+                android:visibility="gone"
+                android:textColor="@color/comm_text_color_black" />
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_marginLeft="@dimen/design_margin"
+            android:layout_marginRight="@dimen/design_margin"
+            android:layout_marginTop="@dimen/dp_10"
+            android:singleLine="false"
+            android:text="请选择适合自己的分类，精准的分类可以获得更多的银币哦~"
+            android:textColor="@color/comm_text_color_black_s"
+            android:textSize="@dimen/comm_text_size_s" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/design_margin"
+            android:layout_marginTop="@dimen/design_margin"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</com.hn.library.loadstate.HnLoadingLayout>

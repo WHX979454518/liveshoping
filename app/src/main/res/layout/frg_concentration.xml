@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hn.library.refresh.PtrClassicFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/tag_bottom"
+    app:ptr_mode="refresh">
+
+    <com.live.shoplib.widget.scollorlayout.ScrollableLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:scrollable_maxScroll="540dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/com_banner_hight">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/home_top_bkg"
+                    android:scaleType="centerCrop" />
+
+                <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/com_banner_hight"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_12"
+                    app:canLoop="true" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goods_category_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/windows_bg"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp" />
+
+            <LinearLayout
+                android:id="@+id/spike_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_marginRight="16dp"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_20"
+                        android:src="@drawable/concentration_spike_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:drawableRight="@drawable/concentration_spike_more"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="更多"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/spike_time_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:layout_marginTop="@dimen/dp_20" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/spike_demo_goods_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_20"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/mViewSpikeAndGroupBuy"
+                style="@style/home_empty_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/concentration_hot_recommend_icon"
+                android:drawableRight="@drawable/concentration_hot_recommend_icon"
+                android:drawablePadding="@dimen/dp_12"
+                android:gravity="center_vertical"
+                android:text="热门推荐"
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+            <View
+                android:id="@+id/mViewRecommendShopLayout"
+                style="@style/home_empty_bg" />
+
+            <FrameLayout
+                android:id="@+id/hot_recommend_shop_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </com.live.shoplib.widget.scollorlayout.ScrollableLayout>
+
+</com.hn.library.refresh.PtrClassicFrameLayout>
+
+
+
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mRlLose"
+        style="@style/home_empty_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/other_gradient_left" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="已失效宝贝"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/other_gradient_right" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/mIvDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/search_deleting" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mLLStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+
+
+        <CheckBox
+            android:id="@+id/mBoxStore"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sel_goods_car"
+            android:button="@null"
+            android:checked="true"
+            android:enabled="true" />
+
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true"
+            />
+
+        <TextView
+            android:id="@+id/mTvStoreName"
+            style="@style/comm_text"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/more_list"
+            android:text="店家" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:id="@+id/mLine"
+        android:layout_marginLeft="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/home_empty_bg" />
+</LinearLayout>

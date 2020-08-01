@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="#41000000"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="vertical"
+        android:background="@drawable/shape_white_radius_4"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:gravity="top"
+            android:hint="请输入拒绝理由"
+            android:textColorHint="#ccc"
+            android:padding="4dp"
+            android:id="@+id/mEdContent"
+            android:background="@drawable/shap_stroke_white_4"
+            android:layout_margin="16dp"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:text="确定"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/mTvSure"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_soild_main_30"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

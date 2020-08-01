@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.live.shoplib.widget.FlowTag.FlowTagLayout
+        android:id="@+id/mSpecRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        tools:layout_height="100dp" />
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:id="@+id/mLLitem"
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/mTvWare"
+            style="@style/comm_text"
+            android:layout_width="wrap_content"
+            android:text="库存：100\t\t\t\t价格："
+            android:textColor="@color/comm_text_color_black" />
+
+        <TextView
+            android:id="@+id/mTvPrice"
+            style="@style/comm_text"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="设置价格"
+            android:textColor="@color/comm_text_color_red" />
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_width="80dp"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/more_list"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/comm_text_color_black" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

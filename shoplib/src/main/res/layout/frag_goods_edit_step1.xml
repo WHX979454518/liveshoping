@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.live.shoplib.ui.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_marginRight="8dp"
+                android:text="商品名称"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="最少3个字符，最多50个字"
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_ss"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_marginRight="8dp"
+                android:text="商品货号"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdGoodsId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="商家货号是指商家管理商品的货号"
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_ss"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_marginRight="8dp"
+                android:text="商品库存"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdWare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="输入商品库存数量"
+                android:inputType="number"
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_ss"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_marginRight="8dp"
+                android:text="库存预警值"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdWarningNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="请填写0~255的数字，0为不预警"
+                android:inputType="number"
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_ss"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="100dp"
+                android:layout_marginRight="8dp"
+                android:text="商品所属栏目"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <TextView
+                android:id="@+id/mTvGroupType"
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/more_list"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_marginRight="8dp"
+                android:text="商品图片"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvGoodsPic"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:actualImageScaleType="centerCrop"
+                    app:failureImage="@drawable/add_photos"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/add_photos"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/mIvGoodsPicDel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:onClick="onStoreEditClick"
+                    android:src="@drawable/delete_picture"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="80dp"
+                android:layout_marginRight="8dp"
+                android:text="商品详情"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <WebView
+                android:id="@+id/mWebView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:ignore="WebViewLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mImgsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.live.shoplib.ui.MyScrollView>

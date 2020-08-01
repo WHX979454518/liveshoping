@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:id="@+id/mLLStore"
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp"
+    >
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvUserIco"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live_head"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/mTvUserName"
+        style="@style/comm_text"
+        android:layout_width="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:layout_marginRight="8dp"
+        android:text="assdasdsadsa啊谁说的 " />
+
+    <TextView
+        android:id="@+id/mTvState"
+        style="@style/comm_text"
+        android:text="待收货"
+        android:textSize="14sp"
+        android:textColor="@color/main_color" />
+
+
+</LinearLayout>

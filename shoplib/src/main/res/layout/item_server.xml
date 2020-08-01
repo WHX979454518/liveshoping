@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <CheckBox
+        android:id="@+id/mBoxItem"
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableLeft="@drawable/sel_goods_car"
+        android:drawablePadding="8dp"
+        android:text="asdasdasd" />
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+</LinearLayout>

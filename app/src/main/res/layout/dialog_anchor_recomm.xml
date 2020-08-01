@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mRlBg"
+    android:visibility="gone"
+    android:background="@color/dialog_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/tag"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/shape_log_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="直播标题："
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <EditText
+                style="@style/comm_text"
+                android:layout_width="180dp"
+                android:id="@+id/mEdTitle"
+                android:layout_height="32dp"
+                android:background="@drawable/shape_log_ed"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textColorHint="@color/comm_text_color_black_s"
+                android:gravity="center_vertical"
+                android:hint="请输入直播标题"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="直播时间："
+                android:textColor="@color/comm_text_color_black_s" />
+
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:background="@drawable/shape_log_ed"
+                android:id="@+id/mTvDate"
+                android:singleLine="true"
+                android:drawableRight="@drawable/lower_black"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="请选择直播时间"
+                android:textColor="@color/comm_text_color_black_s" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/mTvSure"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_soild_main_30"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

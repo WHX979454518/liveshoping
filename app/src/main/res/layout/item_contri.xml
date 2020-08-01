@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/mTvIndex"
+            style="@style/comm_text"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="1" />
+
+        <RelativeLayout
+            android:id="@+id/mLLA"
+            android:layout_width="90dp"
+            android:layout_height="90dp">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvImg"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/moren"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundAsCircle="true" />
+
+            <ImageView
+                android:id="@+id/mIvLevelTag"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/no1" />
+
+
+        </RelativeLayout>
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvImg2"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:visibility="gone"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/moren"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvName"
+                style="@style/comm_text"
+                android:text="asdasdsadsadsad萨斯达舒" />
+
+            <TextView
+                android:id="@+id/mTvUnit"
+                style="@style/comm_text"
+                android:layout_marginTop="4dp"
+                android:text="assdasdasdassdasd"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <com.reslibrarytwo.HnSkinTextView
+            android:id="@+id/mTvFocus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/select_focus_user"
+            android:drawablePadding="@dimen/dp_5"
+            android:paddingBottom="@dimen/design_margin_h"
+            android:paddingTop="@dimen/design_margin_h"
+            android:text="@string/main_follow_on"
+            android:textColor="@drawable/select_main_black_s_color"
+            android:textSize="@dimen/comm_text_size"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/comm_bg_line"/>
+</LinearLayout>

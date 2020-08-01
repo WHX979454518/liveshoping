@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp">
+
+    <RelativeLayout
+        android:id="@+id/gift_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/design_margin_h"
+        android:alpha="40"
+
+        android:paddingRight="10dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/headIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/moren"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:id="@+id/infoLl"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/headIv"
+            android:background="@drawable/rounded_bg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/design_margin"
+            android:paddingRight="@dimen/def_height">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nickNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:text="nickNamasdasdasdasdasdasdasdenickNamasdasdasdasdasdasdasdenickNamasdasdasdasdasdasdasde"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <com.reslibrarytwo.LevelView
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/mLevelView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/infoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/design_margin_h"
+                android:singleLine="true"
+                android:text="送了一个"
+                android:textColor="@color/comm_text_color_main"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/giftIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-40dp"
+            android:layout_toEndOf="@+id/infoLl"
+            android:visibility="invisible"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/gift_loading"
+            app:placeholderImageScaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <com.hotniao.livelibrary.widget.gift.MagicTextView
+        android:id="@+id/numberTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/gift_container"
+        android:text="sss"
+        android:textColor="@color/comm_text_color_main"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:foreground="@color/comm_text_color_main"
+        app:innerShadowColor="@color/comm_text_color_main"
+        app:innerShadowDy="2"
+        app:innerShadowRadius="1"
+        app:strokeColor1="@color/comm_text_color_main_s"
+        app:strokeJoinStyle1="miter"
+        app:strokeWidth1="1" />
+
+</RelativeLayout>

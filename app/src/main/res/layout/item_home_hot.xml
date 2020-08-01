@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="348dp">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/fiv_live_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/live_big_img"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:roundedCornerRadius="6dp" />
+
+    <TextView
+        android:id="@+id/tv_pay_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="1dp"
+        android:text="门票付费"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mIvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_free" />
+
+    <LinearLayout
+        android:id="@+id/mLLBottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_gradient"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/tv_live_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:shadowColor="#40000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/comm_text_size_s"
+            tools:text="门票付费" />
+
+        <TextView
+            android:id="@+id/mTvNum"
+            style="@style/comm_text"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/design_margin"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="bottom"
+            android:textColor="@color/white"
+            android:textSize="@dimen/comm_text_size_s" />
+    </LinearLayout>
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvGameLogo"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        fresco:actualImageScaleType="centerCrop"
+        android:layout_above="@id/mLLBottom"
+        fresco:failureImageScaleType="centerCrop"
+        android:layout_marginLeft="10dp"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        />
+
+
+</RelativeLayout>
+

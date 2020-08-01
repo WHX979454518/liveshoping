@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_bg"
+        android:id="@+id/mLLLog"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/parcel" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvState"
+                    style="@style/comm_text"
+                    android:text=""
+                    android:textColor="@color/main_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mTvCompany"
+                    style="@style/comm_text"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="@color/comm_text_color_black_hs" />
+
+                <TextView
+                    android:id="@+id/mTvId"
+                    style="@style/comm_text"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="@color/comm_text_color_black_hs" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="物流跟踪"
+            android:textColor="@color/comm_text_color_black" />
+
+        <View style="@style/home_line" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mLLEmpty"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_com" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无物流信息" />
+
+    </LinearLayout>
+</LinearLayout>

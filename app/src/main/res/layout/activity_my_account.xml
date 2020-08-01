@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/item_bg_color">
+    <RelativeLayout
+        android:id="@+id/mRlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/account_bg"
+        android:paddingBottom="@dimen/design_margin">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/mIvBack"
+                style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back_black" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@string/hotniao_account"
+                android:textColor="@color/comm_text_color_black"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbar_subtitle"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:background="?attr/actionBarItemBackground"
+                android:singleLine="true"
+                android:text="@string/sub_title"
+                android:textColor="?attr/text_color_666"
+                android:visibility="gone" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/design_margin"
+            android:layout_marginRight="@dimen/design_margin"
+            android:layout_marginTop="@dimen/dp_22">
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="@dimen/design_margin_top"
+                android:ellipsize="end"
+                android:maxWidth="160dp"
+                android:id="@+id/mTvBalance"
+                android:text="@string/balance"
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="@dimen/comm_text_size_s" />
+            <TextView
+                android:id="@+id/mTvToRecharge"
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/mTvBalance"
+                android:layout_marginTop="@dimen/design_margin_h"
+                android:background="@drawable/shap_radius_max_yellow_str_black"
+                android:gravity="center"
+                android:text="@string/recharge"
+                android:textSize="@dimen/comm_text_size_s" />
+
+
+            <TextView
+                android:id="@+id/mTvCion"
+                style="@style/comm_text"
+                android:layout_below="@id/mTvBalance"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:textSize="45sp"
+                android:layout_toLeftOf="@id/mTvToRecharge"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="74545"
+                android:textColor="@color/comm_text_color_black" />
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/mTvEarnings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/comm_text"
+        android:paddingTop="@dimen/design_margin_ss"
+        android:textColor="@color/comm_text_color_black"
+        android:paddingBottom="@dimen/design_margin_ss"
+        android:layout_marginTop="@dimen/design_margin_top"
+        android:text="@string/earning_details"
+        android:textSize="@dimen/comm_text_size_h"
+        android:background="?attr/item_bg_color"
+        android:paddingLeft="@dimen/design_margin"
+        android:drawableLeft="@drawable/income_details"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableRight="@mipmap/more_list"
+        android:paddingRight="@dimen/design_margin"
+        />
+
+    <TextView
+        android:id="@+id/mTvExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/comm_text"
+
+        android:background="?attr/item_bg_color"
+        android:textSize="@dimen/comm_text_size_h"
+        android:drawableLeft="@drawable/records_of_consumption"
+        android:drawablePadding="@dimen/dp_10"
+        android:paddingTop="@dimen/design_margin_ss"
+        android:paddingBottom="@dimen/design_margin_ss"
+        android:textColor="@color/comm_text_color_black"
+        android:text="@string/expense_record"
+        android:paddingLeft="@dimen/design_margin"
+        android:drawableRight="@mipmap/more_list"
+        android:paddingRight="@dimen/design_margin"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/design_margin"
+        android:background="?attr/pageBg_color" />
+    <TextView
+        android:id="@+id/mTvRecharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/comm_text"
+        android:textSize="@dimen/comm_text_size_h"
+        android:drawableLeft="@drawable/recharge_record"
+        android:drawablePadding="@dimen/dp_10"
+        android:background="?attr/item_bg_color"
+        android:paddingTop="@dimen/design_margin_ss"
+        android:textColor="@color/comm_text_color_black"
+        android:paddingBottom="@dimen/design_margin_ss"
+        android:text="@string/recharge_record"
+        android:paddingLeft="@dimen/design_margin"
+        android:drawableRight="@mipmap/more_list"
+        android:paddingRight="@dimen/design_margin"
+        />
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/design_margin"
+        android:background="?attr/pageBg_color" />
+    <TextView
+        android:id="@+id/mTvWithdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/comm_text_size_h"
+        android:drawableLeft="@drawable/withdrawal_record"
+        android:drawablePadding="@dimen/dp_10"
+        style="@style/comm_text"
+        android:background="?attr/item_bg_color"
+        android:paddingTop="@dimen/design_margin_ss"
+        android:paddingBottom="@dimen/design_margin_ss"
+        android:textColor="@color/comm_text_color_black"
+        android:text="@string/withdraw_record"
+        android:paddingLeft="@dimen/design_margin"
+        android:drawableRight="@mipmap/more_list"
+        android:paddingRight="@dimen/design_margin"
+        />
+</LinearLayout>

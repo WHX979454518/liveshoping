@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">shoplib</string>
+    <string name="you_not_hava_orde">您还没有相关订单</string>
+    <string name="not_spike">还没有相关商品</string>
+    <string name="not_little_video">暂无视频</string>
+    <string name="not_little_video_content">暂无内容</string>
+    <string name="not_live">暂无直播</string>
+    <string name="buy_self_btn_string">%1$s\n单独购买</string>
+    <string name="buy_group_buy_btn_string">%1$s\n我要开团</string>
+    <string name="need_to_finish_group_tips">还差%1$s人开团&#160;&#160;距结束</string>
+</resources>

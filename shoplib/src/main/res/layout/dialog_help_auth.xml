@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="vertical"
+        android:layout_height="240dp"
+        android:gravity="center"
+        android:background="@drawable/shape_white_radius_4"
+        android:padding="16dp">
+
+        <TextView
+            android:text="本人手持证件照示例（证件照片与号码清晰可辨）"
+            android:textSize="12sp"
+            style="@style/comm_text"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/defaultidcardimage"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mIvBack"
+        android:src="@drawable/identity_card_closure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

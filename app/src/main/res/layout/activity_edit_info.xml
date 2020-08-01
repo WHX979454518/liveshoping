@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hn.library.loadstate.HnLoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:isFirstVisible="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/comm_line_white_s" />
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="?attr/item_bg_color">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/edit_head_portrait"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <com.hn.library.view.FrescoImageView
+                    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/fiv_header"
+                    android:layout_width="@dimen/def_height"
+                    android:layout_height="@dimen/def_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/design_margin"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_live_head"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/comm_line_white_s" />
+
+            <RelativeLayout
+                android:id="@+id/mRlNick"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height"
+
+                android:background="?attr/item_bg_color">
+
+                <TextView
+                    android:id="@+id/mTvN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/edit_nick"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/more_list"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/comm_text_size"
+                    tools:text="" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="?attr/item_bg_color"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/Id_number"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mTvId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/more_list"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/comm_text_size"
+                    tools:text="男" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/design_margin"
+                android:background="@color/comm_line_white_s" />
+
+            <RelativeLayout
+                android:id="@+id/mRlSex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height"
+                android:background="?attr/item_bg_color">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/edit_gender"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/more_list"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/comm_text_size"
+                    tools:text="男" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/design_margin"
+                android:background="@color/comm_line_white_s" />
+
+            <RelativeLayout
+                android:id="@+id/mRlIntro"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height"
+                android:background="?attr/item_bg_color">
+
+                <TextView
+                    android:id="@+id/mTvIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/user_intro"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_sig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:layout_toRightOf="@id/mTvIn"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/more_list"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/comm_text_size"
+                    tools:text="男就看大家萨克大家思考" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/mLLAuthentication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_weight="1"
+                    android:text="我要认证" />
+
+                <TextView
+                    android:id="@+id/mTvAuth"
+                    style="@style/comm_text"
+                    android:drawableRight="@mipmap/more_list"
+                    android:text="未认证"
+                    android:textColor="@color/comm_text_color_black_s" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/mRlLv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="?attr/item_bg_color"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/my_anchor_lv"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mgo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawableRight="@mipmap/more_list"
+                    android:singleLine="true" />
+
+                <com.reslibrarytwo.HnSkinTextView
+                    android:id="@+id/mTvLv"
+                    android:layout_width="@dimen/design_margin_lv_w"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@id/mgo"
+                    android:background="@drawable/tv_level_shape_1"
+                    android:drawableLeft="@drawable/stars"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/comm_text_color_white"
+                    android:textSize="@dimen/comm_text_size_sh"
+                    tools:text="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlAnchorLv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="0.5dp"
+                android:background="?attr/item_bg_color"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/zhubo_lv"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mgo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawableRight="@mipmap/more_list"
+                    android:singleLine="true" />
+
+                <com.reslibrarytwo.HnSkinTextView
+                    android:id="@+id/mTvAnchorLv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@id/mgo2"
+                    android:background="@drawable/shap_violet_raudio_2"
+                    android:gravity="center"
+                    android:minWidth="@dimen/dp_34"
+                    android:singleLine="true"
+                    android:textColor="#b835e2"
+                    android:textSize="@dimen/comm_text_size_sh"
+                    android:textStyle="italic"
+                    tools:text="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlRealName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="?attr/item_bg_color"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/shiming_renzhen"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mTvRealName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/more_list"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/comm_text_size"
+                    tools:text="男" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlBind"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="0.5dp"
+                android:background="?attr/item_bg_color"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:text="@string/bind_phone"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mTvBind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/more_list"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/comm_text_size"
+                    tools:text="男" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</com.hn.library.loadstate.HnLoadingLayout>
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:onClick="onGoodsDetailsClick"
+            android:src="?attr/ic_toolbar_back" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_87"
+            android:layout_height="@dimen/dp_17"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:src="@drawable/spike_title_img"
+          />
+
+    </RelativeLayout>
+
+    <com.hotniao.live.widget.SpikeSlidingTabLayout
+        android:id="@+id/spike_mSlidingTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/item_bg_color"
+        tl:tl_divider_color="#1Affffff"
+        tl:tl_divider_padding="16dp"
+        tl:tl_indicator_color="@color/main_color"
+        tl:tl_indicator_height="2dp"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_padding="@dimen/design_margin"
+        tl:tl_tab_space_equal="false"
+        tl:tl_textSelectColor="@color/white"
+        tl:tl_textUnselectColor="@color/white"
+        tl:tl_textsize="@dimen/comm_text_size_h"
+        tl:tl_underline_color="#1Affffff"
+        tl:tl_underline_height="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:id="@+id/spike_tips_layout"
+        android:background="@color/id_image_stroke">
+
+        <TextView
+            android:id="@+id/spike_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="限时抢购"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <com.hn.library.view.ColorCountDownText
+            android:id="@+id/spike_count_down_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp">
+        </com.hn.library.view.ColorCountDownText>
+
+        <TextView
+            android:id="@+id/spike_count_down_time_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toLeftOf="@id/spike_count_down_time"
+            android:text="距结束还剩 "
+            android:textColor="#ff333333"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/spike_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+</LinearLayout>

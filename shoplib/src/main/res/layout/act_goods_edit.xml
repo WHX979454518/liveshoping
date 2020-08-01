@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTv1"
+                style="@style/goods_edit"
+                android:text="1" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="4dp"
+                android:text="通用信息"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mView2"
+            style="@style/goods_edit_line"
+            android:background="@color/shop_edit" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTv2"
+                style="@style/goods_edit"
+                android:background="@drawable/shap_cricle_gray"
+                android:text="2" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="4dp"
+                android:text="商品相册"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mView3"
+            style="@style/goods_edit_line"
+            android:background="@color/shop_edit"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTv3"
+                style="@style/goods_edit"
+                android:background="@drawable/shap_cricle_gray"
+                android:text="3" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="4dp"
+                android:text="规格属性"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mView4"
+            style="@style/goods_edit_line"
+            android:background="@color/shop_edit"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTv4"
+                style="@style/goods_edit"
+                android:background="@drawable/shap_cricle_gray"
+                android:text="4" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="4dp"
+                android:text="设置价格"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mView5"
+            style="@style/goods_edit_line"
+            android:background="@color/shop_edit"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTv5"
+                style="@style/goods_edit"
+                android:background="@drawable/shap_cricle_gray"
+                android:text="5" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="4dp"
+                android:text="服务说明"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <com.live.shoplib.widget.CustomViewPager
+        android:id="@+id/mStepViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/mTvNext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/comm_text_color_black_s"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white" />
+
+</LinearLayout>

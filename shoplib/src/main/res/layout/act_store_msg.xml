@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_color"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/mIvBarBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:onClick="onShopDetailsClick"
+                android:src="?attr/ic_toolbar_back" />
+
+            <TextView
+                android:id="@+id/mTvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxWidth="180dp"
+                android:singleLine="true"
+                android:text="店铺信息"
+                android:textColor="@color/comm_text_color_black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvIco"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/default_live"
+                app:roundAsCircle="true"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/mTvName"
+                style="@style/comm_text"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/mTvTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/individual_stores"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvStoreNum"
+                    style="@style/comm_text"
+                    android:textSize="16sp"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginTop="2dp"
+                    android:text="商品"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvSaleNum"
+                    style="@style/comm_text"
+                    android:textSize="16sp"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginTop="2dp"
+                    android:text="销量"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvFanNum"
+                    android:textSize="16sp"
+                    style="@style/comm_text"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginTop="2dp"
+                    android:text="粉丝"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="店铺认证"
+                android:textSize="16sp"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <TextView
+                android:id="@+id/mTvAuth"
+                style="@style/comm_text"
+                android:layout_marginLeft="16dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/comm_text_color_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="店铺介绍"
+                android:textSize="16sp"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <TextView
+                android:id="@+id/mTvIntro"
+                style="@style/comm_text"
+                android:layout_marginLeft="16dp"
+                android:singleLine="false"
+                android:textSize="16sp"
+                android:text=""
+                android:textColor="@color/comm_text_color_black" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="店铺分类"
+                android:textSize="16sp"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <TextView
+                android:id="@+id/mTvSort"
+                style="@style/comm_text"
+                android:layout_marginLeft="16dp"
+                android:singleLine="false"
+                android:textSize="16sp"
+                android:text=""
+                android:textColor="@color/comm_text_color_black" />
+
+        </LinearLayout>
+
+        <View style="@style/home_line" />
+
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:textSize="16sp"
+                android:text="联系方式"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <TextView
+                android:id="@+id/mTvPhone"
+                style="@style/comm_text"
+                android:layout_marginLeft="16dp"
+                android:singleLine="false"
+                android:textSize="16sp"
+                android:text=""
+                android:textColor="@color/comm_text_color_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mLLLencese"
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:text="店铺资质"
+                android:textSize="16sp"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <ImageView
+                android:id="@+id/mTvApt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/shop_qualification_lower" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/mLLLencese2"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_marginBottom="10dp"
+            android:padding="16dp">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvLicense1"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/default_live"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvLicense2"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                app:actualImageScaleType="centerCrop"
+                android:visibility="gone"
+                app:placeholderImage="@drawable/default_live"
+                app:placeholderImageScaleType="centerCrop"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

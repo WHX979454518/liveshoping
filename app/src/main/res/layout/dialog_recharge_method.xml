@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/mLlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:background="?attr/shap_white_radius_4"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_32"
+
+            android:text="@string/choose_pay_method"
+            android:textColor="@color/comm_text_color_black"
+            android:textSize="@dimen/comm_title_text_size" />
+
+        <RadioGroup
+            android:id="@+id/mRg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/mRbAliPay"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:button="@null"
+                android:drawableLeft="@drawable/alipay_payment"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableRight="@drawable/select_radiobutton_check"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dp_14"
+                android:paddingTop="@dimen/dp_14"
+                android:text="@string/ali_pay"
+                android:textColor="@color/comm_text_color_black"
+                android:textSize="@dimen/comm_text_size_h" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="?attr/pageBg_color" />
+
+            <RadioButton
+                android:id="@+id/mRbWxPay"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:button="@null"
+                android:drawableLeft="@drawable/wechat_pay"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableRight="@drawable/select_radiobutton_check"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dp_14"
+                android:paddingTop="@dimen/dp_14"
+                android:text="@string/weixin_pay"
+                android:textColor="@color/comm_text_color_black"
+                android:textSize="@dimen/comm_text_size_h" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/moneybag" />
+
+    <ImageView
+        android:id="@+id/mIvCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mLlCenter"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mode_of_payment_cancel" />
+
+</RelativeLayout>

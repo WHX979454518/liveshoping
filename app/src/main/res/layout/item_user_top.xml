@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/frag_user">
+
+
+    <LinearLayout
+
+        style="@style/user_item_top">
+
+        <TextView
+            android:id="@+id/mTvCare"
+            style="@style/comm_text"
+            android:textSize="16sp"
+            android:text="0" />
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_marginTop="2dp"
+            android:text="关注"
+            android:textColor="@color/comm_text_color_black_s"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        style="@style/user_item_top">
+
+        <TextView
+            android:id="@+id/mTvFans"
+            style="@style/comm_text"
+            android:textSize="16sp"
+            android:text="0" />
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_marginTop="2dp"
+            android:text="粉丝"
+            android:textColor="@color/comm_text_color_black_s"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mLLTrack"
+        style="@style/user_item_top">
+
+        <TextView
+            android:id="@+id/mTvTrackNum"
+            style="@style/comm_text"
+            android:textSize="16sp"
+            android:text="0" />
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_marginTop="2dp"
+            android:text="足迹"
+            android:textColor="@color/comm_text_color_black_s"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

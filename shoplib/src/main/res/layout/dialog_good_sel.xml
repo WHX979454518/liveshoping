@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRlBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#41000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tag_att"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="100dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="¥"
+
+                android:textColor="@color/comm_text_color_red" />
+
+            <TextView
+                android:id="@+id/mTvPrice"
+                style="@style/comm_text"
+                android:text="100"
+                android:textColor="@color/comm_text_color_red"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="bottom">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="库存："
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mTvNum"
+                style="@style/comm_text"
+                android:text="100"
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvIco"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/tag_att"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live_head"
+        app:placeholderImageScaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/tag_att"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mTvSure"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvSure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_color"
+        android:gravity="center"
+        android:padding="12dp"
+        android:enabled="false"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

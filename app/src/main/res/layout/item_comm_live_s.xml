@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvIco"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:actualImageScaleType="centerCrop"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="false" />
+
+    <TextView
+        android:id="@+id/mTvState"
+        style="@style/comm_text"
+        android:layout_margin="8dp"
+        android:background="@drawable/shape_live"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:text="直播中"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/mTvNum"
+        style="@style/comm_text"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp"
+        android:layout_alignBottom="@+id/mIvIco"
+        android:shadowColor="@color/comm_text_color_black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/mTvTitle"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mIvIco"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="asdasdsadasasdas"
+        android:textSize="@dimen/comm_text_size" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mTvTitle"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/mTvTop1"
+            style="@style/comm_text"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_stroke_main_30"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="asdasdasdasdasdasd"
+            android:textColor="@color/main_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/mTvTop2"
+            style="@style/comm_text"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_stroke_main_30"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="10"
+            android:textColor="@color/main_color"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvAddress"
+        style="@style/comm_text"
+        android:visibility="gone" />
+</RelativeLayout>

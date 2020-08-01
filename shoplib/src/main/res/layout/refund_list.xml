@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/mRlTitle"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="@dimen/def_height"
+        android:layout_marginBottom="0.5dp"
+        android:background="?attr/item_bg_color">
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/design_margin"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:onClick="onGoodsDetailsClick"
+            android:src="?attr/ic_toolbar_back" />
+
+        <com.hn.library.view.HnEditText
+            android:id="@+id/mEdSearch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/design_margin"
+            android:layout_toRightOf="@+id/mIvBack"
+            android:background="@drawable/shape_search"
+            android:drawableLeft="@drawable/icon_search_grey"
+            android:drawablePadding="10dp"
+            android:hint="商品名称/订单号"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:singleLine="true"
+            android:textColor="#333"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/comm_text_size" />
+    </RelativeLayout>
+
+
+    <com.hn.library.loadstate.HnLoadingLayout
+        android:id="@+id/mHnLoadingLayout"
+        android:layout_width="match_parent"
+        android:background="?attr/pageBg_color"
+        android:layout_height="match_parent"
+        app:isFirstVisible="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvHead"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_36"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/design_margin"
+                android:paddingRight="@dimen/design_margin"
+                android:text=""
+                android:textColor="@color/comm_text_color_black_s"
+                android:visibility="gone" />
+
+            <com.hn.library.refresh.PtrClassicFrameLayout
+                android:id="@+id/mRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ptr_mode="both">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.hn.library.refresh.PtrClassicFrameLayout>
+        </LinearLayout>
+
+
+    </com.hn.library.loadstate.HnLoadingLayout>
+
+</LinearLayout>

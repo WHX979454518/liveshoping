@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_10">
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/category_icon_img"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/live_nearby_default"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="饮品"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="9dp"
+        android:id="@+id/category_name"
+        android:textColor="#ff6b7076"
+        android:textSize="12sp"
+        />
+</LinearLayout>

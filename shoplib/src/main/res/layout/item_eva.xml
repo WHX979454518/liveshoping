@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mLLCommentDetails"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvUserIco"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/mTvUserName"
+            style="@style/comm_text"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            tools:text="asdasdasdasd " />
+
+        <com.live.shoplib.widget.StartRatingBar xmlns:lxhRatingBar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mIvStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            lxhRatingBar:canEdit="false"
+            lxhRatingBar:countSelected="0"
+            lxhRatingBar:dividerWidth="1dp"
+            lxhRatingBar:starCount="5" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvEva"
+        style="@style/comm_text"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:singleLine="false"
+        tools:text="asdasdasdzdasdasdas阿四打撒撒旦阿斯顿撒时代的方法士大夫时代的方法士大夫 士大夫第三方第三方第三方发生的士大夫士大夫士大夫士大夫分析师的说法方法士大夫时代的方法是对的" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvEvaIco1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="false"
+            android:visibility="invisible"/>
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvEvaIco2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="false"
+            android:visibility="invisible"/>
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvEvaIco3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live"
+            app:placeholderImageScaleType="centerCrop"
+            android:visibility="invisible"
+            app:roundAsCircle="false" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvGoodsMsg"
+        style="@style/comm_text"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:singleLine="false"
+        android:textColor="@color/comm_text_color_black_s"
+        android:textSize="12sp"
+        tools:text="士大夫第三方第三方第三方发生的士大夫士大夫士大夫士大夫分析师的说法方法士大夫时代的方法是对的" />
+
+    <View style="@style/home_empty_bg" />
+
+</LinearLayout>

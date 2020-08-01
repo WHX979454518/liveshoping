@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/goods_img"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_gravity="center_horizontal"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/live_nearby_default"
+        app:placeholderImageScaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="¥2998"
+        android:textColor="#fff63522"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/goods_old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:text="¥2998"
+        android:textColor="#ffcccccc"
+        android:textSize="12sp" />
+
+</LinearLayout>

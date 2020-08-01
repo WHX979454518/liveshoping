@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/design_margin_h"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@drawable/home_search" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <com.hn.library.tab.SlidingTabLayout
+                xmlns:tl="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mSlidTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/design_margin_ss"
+                android:paddingTop="@dimen/design_margin_ss"
+                tl:tl_divider_color="#1Affffff"
+                tl:tl_divider_padding="16dp"
+                tl:tl_indicator_color="@color/white"
+                tl:tl_indicator_height="0dp"
+                tl:tl_indicator_width_equal_title="true"
+                tl:tl_tab_padding="@dimen/design_margin"
+                tl:tl_tab_space_equal="false"
+                tl:tl_textSelectColor="@color/comm_text_color_black"
+                tl:tl_textUnselectColor="@color/comm_text_color_black_s"
+                tl:tl_textsize="@dimen/comm_text_size_h"
+                tl:tl_underline_color="#1Affffff"
+                tl:tl_underline_height="0dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/mIvTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/design_margin_h"
+            android:background="@drawable/home_mask"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@drawable/home_more" />
+
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title" />
+
+</RelativeLayout>

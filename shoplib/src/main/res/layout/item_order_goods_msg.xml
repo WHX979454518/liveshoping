@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mLLGoodsItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/cus_padding">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvGoodsIco"
+        android:layout_gravity="center_vertical"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live"
+        app:placeholderImageScaleType="centerCrop" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_height="112dp"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTvGoodsName"
+            style="@style/comm_text"
+            android:lines="2"
+            android:singleLine="false"
+            tools:text="asssdasd阿萨斯的阿萨斯的阿萨斯的阿萨斯的阿萨德阿萨斯的阿萨德撒啊大asd " />
+
+        <TextView
+            android:id="@+id/mTvGoodsMsg"
+            style="@style/comm_text"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/comm_text_color_black_s"
+            tools:text="asd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="¥"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mTvPrice"
+                style="@style/comm_text"
+                android:layout_width="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="12sp"
+                tools:text="10000" />
+
+            <TextView
+                style="@style/comm_text"
+                android:text="x"
+                android:id="@+id/mTvTag"
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/mTvGoodsNum"
+                style="@style/comm_text"
+                android:layout_marginLeft="2dp"
+                android:text="0"
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="10sp"
+                tools:text="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/mTvGoodsRefend"
+                style="@style/comm_text"
+                android:text="退款"
+                android:textColor="@color/main_color"
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:paddingLeft="12dp"
+                android:visibility="gone"
+                android:paddingRight="12dp"
+                android:background="@drawable/shape_stoke_main_30"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mTvGoodsTag"
+                style="@style/comm_text"
+                android:text=""
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:textColor="#fdb50b"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    

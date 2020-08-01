@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/main_color"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                style="@style/comm_text"
+                android:text="金币余额"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mTvCoin"
+                style="@style/comm_text"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/comm_text_color_black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="兑换银币"
+            android:textColor="@color/comm_text_color_black_s"
+            android:textSize="12sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义"
+            android:textColor="@color/comm_text_color_black"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/mEdInput"
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/shape_rechange"
+            android:hint="请输入兑换的银币数"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:textColor="@color/comm_text_color_black"
+            android:textColorHint="@color/comm_text_color_black_s" />
+
+        <TextView
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0金币"
+            android:id="@+id/mTvNeedDot"
+            android:textColor="@color/comm_text_color_red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:text="确认兑换"
+            android:layout_margin="20dp"
+            android:id="@+id/mTvSubmit"
+            android:gravity="center"
+            android:background="@drawable/shape_soild_main_30"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp" />
+
+
+    </LinearLayout>
+</ScrollView>

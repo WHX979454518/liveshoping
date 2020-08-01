@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvStore"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/mTvStoreName"
+            style="@style/comm_text"
+            android:layout_width="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:text="assdasdsadsa啊谁说的 " />
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cus_padding">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:text="配送方式" />
+
+
+        <TextView
+            android:id="@+id/mTvCarriage"
+            style="@style/comm_text"
+            android:text="0" />
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cus_padding">
+
+        <TextView
+            style="@style/comm_text"
+            android:text="备注：" />
+
+        <EditText
+            style="@style/comm_text"
+            android:id="@+id/mEdContent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:hint="给卖家留言（45字内）"
+            android:maxLength="45"
+            android:text="" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/cus_padding">
+
+        <TextView
+            style="@style/comm_text"
+            android:text="小计：" />
+        <TextView
+            android:id="@+id/tag_unit"
+            style="@style/comm_text"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/comm_text_color_red"
+            android:text="¥" />
+
+        <TextView
+            android:id="@+id/mTvMoney"
+            style="@style/comm_text"
+            android:layout_marginLeft="2dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/comm_text_color_red"
+            android:text="0"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

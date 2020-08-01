@@ -1,0 +1,81 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ToolbarTheme">
+        <item name="actionMenuTextColor">@color/white</item> <!--  菜单字体颜色-->
+        <item name="android:textSize">18sp</item> <!-- 菜单字体大小-->
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+    <style name="text_gray_12s">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/comm_text_color_black_s</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="order_butten">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="cus_padding">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">16dp</item>
+    </style>
+
+
+    <style name="MediaController_SeekBar" parent="@android:style/Widget.Material.SeekBar" tools:ignore="NewApi">
+        <item name="android:progressDrawable">@drawable/skill_progress_bar_states</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+    </style>
+
+    <style name="user_item_shop">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="user_item_shop_num">
+        <item name="android:layout_width">@dimen/design_margin</item>
+        <item name="android:layout_height">@dimen/design_margin</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/dp_22</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@drawable/shap_cricle_red</item>
+        <item name="android:textColor">@color/comm_text_color_white</item>
+        <item name="android:textSize">@dimen/comm_text_size_sh</item>
+    </style>
+
+    <style name="goods_edit">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/shap_cricle</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="goods_edit_line">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:background">@color/main_color</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+
+</resources>

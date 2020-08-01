@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvUserIco"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:id="@+id/mTvUserName"
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:text="商品满意度"
+                android:visibility="visible" />
+
+            <com.live.shoplib.widget.StartRatingBar
+                xmlns:lxhRatingBar="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mIvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mTvUserName"
+                android:layout_marginTop="8dp"
+                lxhRatingBar:canEdit="true"
+                lxhRatingBar:countSelected="5"
+                lxhRatingBar:dividerWidth="1dp"
+                lxhRatingBar:starCount="5" />
+
+            <TextView
+                android:id="@+id/mTvState"
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mTvUserName"
+                android:layout_marginTop="10dp"
+                android:text="非常好"
+                android:textColor="@color/comm_text_color_black_s" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+    <EditText
+        android:id="@+id/mEdContent"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="写下体会来帮助其他小伙伴吧~"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="12dp"
+        android:singleLine="false"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp">
+
+
+        <RelativeLayout
+            android:id="@+id/mRlImg1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="4dp"
+            android:onClick="onStoreEditClick"
+            android:visibility="gone">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvIco1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/mIvDelete1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onStoreEditClick"
+                android:src="@drawable/delete_picture" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRlImg2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="4dp"
+            android:onClick="onStoreEditClick"
+            android:visibility="gone">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvIco2"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/mIvDelete2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onStoreEditClick"
+                android:src="@drawable/delete_picture" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRlImg3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="4dp"
+            android:onClick="onStoreEditClick"
+            android:visibility="gone">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvIco3"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/mIvDelete3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onStoreEditClick"
+                android:src="@drawable/delete_picture" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/mIvAddImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:onClick="onStoreEditClick"
+            android:src="@drawable/add_photos" />
+    </LinearLayout>
+
+    <View style="@style/home_empty_bg" />
+</LinearLayout>

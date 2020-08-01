@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/cus_padding">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="8dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live"
+            app:placeholderImageScaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/mTvGoodsName"
+                style="@style/comm_text"
+                android:text="assdasdsadasdasdasdasdasdasdasdasdasdasd" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginRight="2dp"
+                    android:text="¥"
+                    android:textColor="@color/comm_text_color_red"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mTvPrice"
+                    style="@style/comm_text"
+                    android:text="1000000"
+                    android:textColor="@color/comm_text_color_red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <TextView
+                    android:id="@+id/mTvGoodsDown"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_stoke_gray_30"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:text="下架"
+                    android:textColor="@color/comm_text_color_black" />
+
+                <TextView
+                    android:id="@+id/mTvGoodsUp"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_stoke_main_30"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:text="推荐"
+                    android:textColor="@color/main_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/home_line" />
+
+</LinearLayout>

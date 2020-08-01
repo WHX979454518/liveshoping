@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_14"
+    android:paddingLeft="@dimen/dp_14"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        >
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/user_head_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/user_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_toRightOf="@id/user_head_img"
+            android:text="这里是用户的昵称"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/little_video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="这里是短视频的标题这里是短视频的标题"
+        android:textColor="#ff666666"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_click_layout"
+        android:layout_marginTop="@dimen/dp_8"
+        >
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/little_video_introduce_img"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundedCornerRadius="5dp" />
+
+        <ImageView
+            android:id="@+id/little_video_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/little_video_paly" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/article_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="8"
+        android:text="这里是短视频的标题这里是短视频的标题这里是短这里是短视频的标题这里是短视频的标题这里是短这里是短视频的标题这里是短视频的标题这里是短这里是短视频的标题这里...展开"
+        android:textColor="#ff333333"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_11">
+
+        <ImageView
+            android:id="@+id/little_video_like"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_4"
+            android:src="@drawable/little_video_unlike" />
+
+        <TextView
+            android:id="@+id/little_video_like_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/little_video_like"
+            android:text="1.232"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/little_video_comment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_toRightOf="@id/little_video_like_number"
+            android:padding="@dimen/dp_4"
+            android:src="@drawable/little_video_comment" />
+
+        <TextView
+            android:id="@+id/little_video_comment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/little_video_comment"
+            android:text="1.232"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/little_video_publish_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="５-21"
+            android:textColor="#ffaaaaaa"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        style="@style/cus_padding">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:text="需支付金额：" />
+
+        <TextView
+            android:id="@+id/tag_unit"
+            style="@style/comm_text"
+            android:text="¥"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mTvMoney"
+            style="@style/comm_text"
+            android:layout_marginLeft="2dp"
+            android:text="0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:text="请选择支付方式"
+        android:textColor="@color/comm_text_color_black_s"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/cus_padding">
+
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/alipay_payment"
+            android:text="支付宝支付" />
+
+        <CheckBox
+            android:id="@+id/mBoxAli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/sel_goods_car"
+            android:checked="true"
+            android:enabled="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View style="@style/home_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/cus_padding">
+
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/wechat_pay"
+            android:text="微信支付" />
+
+        <CheckBox
+            android:id="@+id/mBoxWx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/sel_goods_car"
+            android:checked="false"
+            android:enabled="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/cus_padding">
+
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:text="测试支付" />
+
+        <CheckBox
+            android:id="@+id/mBoxTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/sel_goods_car"
+            android:checked="false"
+            android:enabled="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="120dp"
+        android:text="确定支付"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/mTvCommitPay"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/shape_soild_main_30"
+        android:layout_height="50dp" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/item_order_goods_msg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/mTvGoodsEdit"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:text="编辑商品"
+            android:textColor="@color/comm_text_color_black" />
+
+        <TextView
+            android:id="@+id/mTvEdit"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:text="编辑栏目"
+            android:textColor="@color/comm_text_color_black" />
+
+        <TextView
+            android:id="@+id/mTvUpDown"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_main_30"
+            android:text="上架"
+            android:textColor="@color/comm_bg_main" />
+
+    </LinearLayout>
+
+</LinearLayout>

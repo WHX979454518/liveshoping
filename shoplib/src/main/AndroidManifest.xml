@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.live.shoplib">
+
+    <application android:screenOrientation="portrait">
+
+        <activity
+            android:name=".ui.GoodsEditAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.StoreGoodsListDownAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.TrackAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.GoodsListAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.StoreGoodsListAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.TeKotlinAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.HnShopAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.MyStoreAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.GoodsAttrAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.EditAttrSpecAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.GoodsTypeAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.HistoryRecordAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.HistoryRecordListAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.live.shoplib.ui.FreightSetAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.ShopDetailsAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.ShopOrderAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.EvaGoodsAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.RefundGoodsAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.RefundDetailsAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.GoodsDetailsAct"
+            tools:ignore="DuplicateActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.hotniao.live.activity.GoodsHaveVideoDetailsAct"
+            tools:ignore="DuplicateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize"/>
+
+
+        <!--要测试外部网页拉起App的场景-->
+        <activity
+            android:name=".ui.GroupBuyGoodsDetailsAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity">
+            <intent-filter>
+                <!--接收外部跳转-->
+                <action android:name="android.intent.action.VIEW" />
+                <!--表示该页面可以被隐式调用，必须加上该项-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--如果希望该应用可以通过浏览器的连接启动，则添加该项-->
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="start_group_details"
+                    android:scheme="dianyidian" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SpikeGoodsDetailsAct"
+            android:screenOrientation="portrait"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.OrderDetailsAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.EvaPublicAct"
+            android:launchMode="singleTask"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.EvaResultAct"
+            android:launchMode="singleTask"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.GoodsLogisticsAct"
+            tools:ignore="DuplicateActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.ApplyBackAct"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.AddressAddEditAct"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.AddressReceivingAct"
+            tools:ignore="DuplicateActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.GoodsCarAct"
+            tools:ignore="DuplicateActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.GoodsCommitAct"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="DuplicateActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.HnPhotoPagerActivity"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="DuplicateActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.PayDetailsAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.PayResponseAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.BackListAct" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.StoreMsgAct" />
+        <activity android:name=".ui.SellerCenterAct"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.AuthSortAct"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.StoreEditAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.StoreGoodsAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.StoreGroupAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.SureOrderAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.GroupBuyDetailsAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+    </application>
+
+</manifest>

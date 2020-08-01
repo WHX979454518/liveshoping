@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mLLBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:text="直播回放" />
+
+            <TextView
+                style="@style/comm_text"
+                android:drawableRight="@mipmap/more_list"
+                android:textColor="@color/comm_text_color_black_s" />
+        </LinearLayout>
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+
+
+        <LinearLayout
+            android:id="@+id/mLLRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:text="我的房管" />
+
+            <TextView
+                style="@style/comm_text"
+                android:drawableRight="@mipmap/more_list"
+                android:textColor="@color/comm_text_color_black_s" />
+        </LinearLayout>
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+
+
+        <LinearLayout
+            android:id="@+id/mLLNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:text="预约直播" />
+
+            <TextView
+                style="@style/comm_text"
+                android:drawableRight="@mipmap/more_list"
+                android:textColor="@color/comm_text_color_black_s" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/dialog_anchor_recomm" />
+
+</RelativeLayout>

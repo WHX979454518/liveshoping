@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <View
+        android:id="@+id/mLine1"
+        style="@style/home_line"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/mLine1"
+        android:id="@+id/mIvTag"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/log_green" />
+
+    <View
+        android:id="@+id/mLine2"
+        style="@style/home_line"
+        android:layout_width="2dp"
+        android:layout_below="@+id/mIvTag"
+        android:layout_alignBottom="@+id/line"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/mTvMsg1"
+        style="@style/comm_text"
+        android:layout_toRightOf="@+id/mLine1"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="false"
+        android:text="asdasdasdasdasdadasdas" />
+
+    <TextView
+        android:id="@+id/mTvMsg2"
+        style="@style/comm_text"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/mLine1"
+        android:layout_below="@+id/mTvMsg1"
+        android:paddingBottom="16dp"
+        android:singleLine="false"
+        android:text="asdasdasdasdasdadasdas" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_toRightOf="@+id/mLine1"
+        android:layout_below="@+id/mTvMsg2"
+        style="@style/home_line" />
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp">
+
+        <TextView
+            android:id="@+id/mTvTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称"
+            android:textColor="@color/comm_text_color_black_s" />
+
+        <com.hn.library.view.HnEditText
+            android:id="@+id/mTvValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:text=""
+            android:textColor="@color/comm_text_color_black" />
+
+    </LinearLayout>
+
+    <View style="@style/home_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/comm_text_color_black_s"
+            android:layout_marginRight="8dp"
+            android:text="值：" />
+
+
+        <com.live.shoplib.widget.FlowTag.FlowTagLayout
+            android:id="@+id/mSpecRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mTvSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_color"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/white" />
+
+</LinearLayout>

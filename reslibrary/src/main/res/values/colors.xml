@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="live_main_color_f0f0f0">#f0f0f0</color>
+    <color name="live_main_bg_color_press">#10000000</color>
+    <color name="live_line">#f0f0f0</color>
+
+    <color name="live_black2b2d3a">#2b2d3a</color>
+    <color name="live_color_66000000">#66000000</color>
+    <color name="live_color_ff3a3a">#ff3a3a</color>
+    <color name="live_colcor_66000000">#66000000</color>
+    <color name="live_colcor_2b2b2b">#2b2b2b</color>
+    <color name="live_colcor_f21b1b">#f21b1b</color>
+    <color name="live_color_ff5d52">#ff5d52</color>
+    <color name="live_color_fdd2af">#fdd2af</color>
+    <color name="live_color_f69728">#F69728</color>
+    <color name="live_color_f49a0b">#f49a0b</color>
+    <color name="live_color_fafafa">#fafafa</color>
+
+
+    <color name="live_colors_9f2ce7">#9f2ce7</color>
+
+
+
+    <!--我的等级颜色 10级一区分-->
+    <color name="live_user_level_1">#a954ec</color>
+    <color name="live_user_level_1_stroke">#9941df</color>
+
+    <color name="live_user_level_2">#e03d8a</color>
+    <color name="live_user_level_2_stroke">#d32f7d</color>
+
+    <color name="live_user_level_3">#f17633</color>
+    <color name="live_user_level_3_stroke">#d97036</color>
+
+    <color name="live_user_level_4">#f25582</color>
+    <color name="live_user_level_4_stroke">#f24173</color>
+
+    <color name="live_user_level_5">#09afcd</color>
+    <color name="live_user_level_5_stroke">#0da2bd</color>
+
+    <color name="live_user_level_6">#f9b241</color>
+    <color name="live_user_level_6_stroke">#e8a63e</color>
+
+    <color name="live_user_level_7">#e28147</color>
+    <color name="live_user_level_7_stroke">#e0793b</color>
+
+    <color name="live_user_level_8">#00c4b9</color>
+    <color name="live_user_level_8_stroke">#06afa5</color>
+
+    <color name="live_user_level_9">#f3b00e</color>
+    <color name="live_user_level_9_stroke">#e0a413</color>
+
+    <color name="live_user_level_10">#f34c35</color>
+    <color name="live_user_level_10_stroke">#ed3d24</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="first_text_525252">#ff525252</color>
+    <color name="color_d9d9d9">#d9d9d9</color>
+    <color name="line_bg">#f0f0f0</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_f97818">#f97818</color>
+    <color name="shop_edit">#cbdade</color>
+
+</resources>

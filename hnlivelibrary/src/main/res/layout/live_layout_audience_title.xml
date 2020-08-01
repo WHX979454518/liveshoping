@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_top_con"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical"
+    tools:background="#aaa">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/room_top_shape">
+
+            <!--头像-->
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/fiv_header"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/moren"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true" />
+
+            <ImageView
+                android:id="@+id/iv_vip"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignBottom="@+id/fiv_header"
+                android:layout_alignRight="@+id/fiv_header"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_2"
+                android:background="@mipmap/icon_v"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/ll_anc_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/fiv_header"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/design_margin">
+
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="60dp"
+                    android:singleLine="true"
+                    android:text="---"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="0人"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/ll_anc_info"
+                android:background="@drawable/shape_soild_main_30"
+                android:gravity="center"
+                android:text="@string/live__care"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/rl_info"
+            android:gravity="center_vertical|right">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/tv_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:padding="4dp"
+                android:src="@mipmap/tuichu_zhibojian" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@id/rl_top"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/room_star_money_shape"
+        android:drawableLeft="@drawable/user_contributed_list"
+        android:drawablePadding="@dimen/design_margin_h"
+        android:drawableRight="@drawable/user_contributed_list_right"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/mLLStoreMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:background="@drawable/shape_room_left_1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/mTvShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="--123123123123"
+                android:maxWidth="100dp"
+                android:textColor="@color/black" />
+
+            <com.reslibrarytwo.LevelView
+                android:id="@+id/mLevelView"
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mTvShopId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_room_left_2"
+            android:gravity="center"
+            android:shadowColor="@color/comm_text_color_black_hs"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvNetSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/design_margin"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_coin"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_live_network_speed"
+        android:gravity="center"
+        android:paddingLeft="@dimen/design_margin_s"
+        android:paddingRight="@dimen/design_margin_s"
+        android:text="0kb/s"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        android:id="@+id/mRlRecommend"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_coin"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_goods_live"
+        android:visibility="gone">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvGoods"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_centerInParent="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_live"
+            fresco:placeholderImageScaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="4dp"
+            android:background="#42ffffff"
+            android:gravity="center">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="¥"
+                android:textColor="@color/comm_text_color_main"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/mTvMoney"
+                style="@style/comm_text"
+                android:layout_marginLeft="2dp"
+                android:text="10000"
+                android:textColor="@color/comm_text_color_main"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

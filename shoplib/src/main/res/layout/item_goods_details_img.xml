@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hn.library.view.FrescoImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mIvIco"
+    app:actualImageScaleType="centerCrop"
+    app:placeholderImage="@drawable/default_live_head"
+    app:placeholderImageScaleType="centerCrop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />

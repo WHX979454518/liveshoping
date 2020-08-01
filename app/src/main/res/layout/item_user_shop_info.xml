@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    tools:showIn="@layout/frag_user">
+
+    <RelativeLayout
+        android:id="@+id/mLLShopCar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/shop_car"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/shop_car"
+            android:text="购物车"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitPayNum"
+            style="@style/user_item_shop_num" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLLCollect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/my_collection"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/my_collection"
+            android:text="我的收藏"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitDeliverNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLFouces"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/my_follow"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/my_follow"
+            android:text="我的关注"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitGetNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/mLlFans"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/comm_text"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@mipmap/minne_fans"
+            android:text="我的粉丝"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvFans"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mLLShopAddress"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/my_address"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/my_address"
+            android:text="我的地址"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvEvaluateNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mRlRefund"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/real_verify"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/real_verify"
+            android:text="实名认证"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvRefundNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+
+</LinearLayout>

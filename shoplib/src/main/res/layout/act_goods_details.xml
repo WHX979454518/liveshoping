@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:onClick="onGoodsDetailsClick"
+            android:src="?attr/ic_toolbar_back" />
+
+        <TextView
+            android:id="@+id/mTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxWidth="180dp"
+            android:singleLine="true"
+            android:text="商品详情"
+            android:textColor="@color/comm_text_color_black"
+            android:textSize="18sp" />
+
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/mIvBarShare">
+
+            <ImageView
+                android:id="@+id/mIvBarShopCar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="onGoodsDetailsClick"
+                android:padding="8dp"
+                android:src="@drawable/bar_shop_car" />
+
+            <ImageView
+                android:id="@+id/mIvAddGoodsNew"
+                android:layout_width="@dimen/design_margin_s"
+                android:layout_height="@dimen/design_margin_s"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/ic_red_dian"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/mIvBarShare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:onClick="onGoodsDetailsClick"
+            android:padding="8dp"
+            android:src="@drawable/bar_shop_share" />
+
+    </RelativeLayout>
+
+
+    <com.live.shoplib.widget.DragLayout
+        android:id="@+id/mDragLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tag_bottom"
+        android:layout_below="@+id/mTitle"
+        android:layout_weight="1">
+
+        <com.live.shoplib.bean.ScrollViewExtend
+            android:id="@+id/crollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.hotniao.live.utils.Banner
+                    android:visibility="gone"
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                </com.hotniao.live.utils.Banner>
+
+
+
+
+                <com.live.shoplib.bean.ViewPager
+                    android:visibility="gone"
+                    android:id="@+id/mmViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+                </com.live.shoplib.bean.ViewPager>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.hn.library.banner.HnBannerLayout
+                        android:id="@+id/mBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+                    <com.xiao.nicevideoplayer.NiceVideoPlayer
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:id="@+id/video_player"
+                        />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mTvGoodsName"
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="@color/comm_text_color_black"
+                    tools:text="asdassdass撒上点的阿萨斯的阿萨斯的阿萨斯的阿萨德阿萨德阿萨斯的撒的" />
+
+                <TextView
+                    android:id="@+id/mTvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/comm_text_color_red"
+                    tools:text="4936641631656949" />
+
+                <LinearLayout
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/mTvGoodsFreight"
+                            style="@style/text_gray_12s"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            style="@style/text_gray_12s"
+                            android:text="销量：" />
+
+                        <TextView
+                            android:id="@+id/mTvGoodsSell"
+                            style="@style/text_gray_12s"
+                            android:text="0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            style="@style/text_gray_12s"
+                            android:text="库存：" />
+
+                        <TextView
+                            android:id="@+id/mTvGoodsStore"
+                            style="@style/text_gray_12s"
+                            android:text="0" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mLLServer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fafafa"
+                    android:gravity="center"
+                    android:onClick="onGoodsDetailsClick"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/mTvServer1"
+                        style="@style/comm_text"
+                        android:drawableLeft="@drawable/products_selected"
+                        android:drawablePadding="6dp"
+                        android:text="待定"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/mTvServer2"
+                        style="@style/comm_text"
+                        android:layout_marginLeft="8dp"
+                        android:drawableLeft="@drawable/products_selected"
+                        android:drawablePadding="6dp"
+                        android:text="待定"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/mTvServer3"
+                        style="@style/comm_text"
+                        android:layout_marginLeft="8dp"
+                        android:drawableLeft="@drawable/products_selected"
+                        android:drawablePadding="6dp"
+                        android:text="待定"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:layout_weight="1"
+                        android:drawableRight="@mipmap/more_list"
+                        android:textColor="@color/comm_text_color_black_hs" />
+                </LinearLayout>
+
+                <View style="@style/home_empty_bg" />
+
+                <LinearLayout
+                    android:id="@+id/mLLGoodsSize"
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGoodsDetailsClick">
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:layout_weight="1"
+                        android:text="规格" />
+
+                    <TextView
+                        android:id="@+id/mTvGoodsSize"
+                        style="@style/comm_text"
+                        android:drawableRight="@mipmap/more_list"
+                        android:gravity="center"
+                        android:textColor="@color/comm_text_color_black_hs" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/home_line"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/mLLGoodsAttr"
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGoodsDetailsClick">
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:layout_weight="1"
+                        android:text="产品参数" />
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:drawableRight="@mipmap/more_list"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/comm_text_color_black_hs" />
+
+                </LinearLayout>
+
+                <View style="@style/home_empty_bg" />
+
+                <LinearLayout
+                    android:id="@+id/mLLGoodsGroupBuyInfo"
+                    style="@style/cus_padding"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:text="拼团" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="参加ta人的已开团，可快速成团"
+                            android:textColor="#ffaaaaaa"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:orientation="horizontal">
+
+                        <com.hn.library.view.FrescoImageView
+                            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/start_group_head"
+                            android:layout_width="@dimen/dp_31"
+                            android:layout_height="@dimen/dp_31"
+                            android:layout_gravity="left"
+                            android:src="@drawable/example_head_img"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/default_live_head"
+                            fresco:placeholderImageScaleType="centerCrop"
+                            fresco:roundAsCircle="true" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_31"
+                            android:layout_height="@dimen/dp_31"
+                            android:layout_toRightOf="@id/start_group_head"
+                            android:id="@+id/start_group_add"
+                            android:src="@drawable/add_group_img" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@id/start_group_add"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/start_group_name"
+                                android:text="迪迦奥特曼"
+                                android:textColor="#ff666666"
+                                android:textSize="12sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/start_group_info"
+                                android:layout_marginTop="@dimen/dp_6"
+                                android:text="还差一人开团，距结束20:18:55"
+                                android:textColor="#ffaaaaaa"
+                                android:textSize="12sp"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="立即参团"
+                            android:textColor="#ffffffff"
+                            android:textSize="12sp"
+                            android:id="@+id/start_group_btn"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10"
+                            android:paddingBottom="@dimen/dp_6"
+                            android:paddingTop="@dimen/dp_6"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/start_group_btn_bkg"
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <View style="@style/home_empty_bg" />
+
+                <LinearLayout
+                    android:id="@+id/mLLCommmentEmpty"
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGoodsDetailsClick"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:layout_weight="1"
+                        android:text="暂无评论" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mLLComment"
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGoodsDetailsClick">
+
+                    <TextView
+                        android:id="@+id/mTvCommment"
+                        style="@style/comm_text"
+                        android:layout_weight="1"
+                        android:text="评论" />
+
+                    <TextView
+                        android:id="@+id/mTvCommentPecent"
+                        style="@style/comm_text"
+                        android:text="100%"
+                        android:textColor="@color/comm_text_color_red" />
+
+                    <TextView
+                        android:id="@+id/mTvCommentState"
+                        style="@style/comm_text"
+                        android:drawableRight="@mipmap/more_list"
+                        android:gravity="center"
+                        android:text="好评"
+                        android:textColor="@color/comm_text_color_black_hs" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/mViewCommLine"
+                    style="@style/home_line" />
+
+                <LinearLayout
+                    android:id="@+id/mLLComment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onGoodsDetailsClick">
+
+                    <include layout="@layout/item_eva" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.live.shoplib.bean.ScrollViewExtend>
+
+
+        <WebView
+            android:id="@+id/mWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.live.shoplib.widget.DragLayout>
+
+    <View
+        android:id="@+id/tag_bottom"
+        style="@style/home_line"
+        android:layout_above="@+id/tag" />
+
+    <LinearLayout
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/mTvConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/shop_chat"
+            android:onClick="onGoodsDetailsClick"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="客服"
+            android:textColor="@color/comm_text_color_black_hs"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/shop_info"
+            android:onClick="onGoodsDetailsClick"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="店铺"
+            android:textColor="@color/comm_text_color_black_hs"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/mBoxCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/sel_collection"
+            android:onClick="onGoodsDetailsClick"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="收藏"
+            android:textColor="@color/comm_text_color_black_hs"
+            android:textSize="12sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/mTvShopCar"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:background="@color/main_color"
+            android:gravity="center"
+            android:onClick="onGoodsDetailsClick"
+            android:text="加入购物车" />
+
+        <TextView
+            android:id="@+id/mTvBug"
+            android:layout_width="100dp"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:background="@color/goods_details_3"
+            android:gravity="center"
+            android:onClick="onGoodsDetailsClick"
+            android:text="立即购买" />
+    </LinearLayout>
+
+</LinearLayout>

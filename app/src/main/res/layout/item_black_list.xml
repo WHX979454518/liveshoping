@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mTvName"
+                android:singleLine="true"
+                android:textColor="@color/comm_text_color_black"
+                android:text="啊傻傻大" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:text="关注:" />
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:layout_width="60dp"
+                    android:id="@+id/mTv1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:layout_marginRight="10dp"
+                    android:text="10000" />
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:text="粉丝:" />
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:layout_width="60dp"
+                    android:id="@+id/mTv2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:layout_marginRight="10dp"
+                    android:text="10000" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <CheckBox
+            android:textColor="@color/sel_stoke_color_live_notiec"
+            android:checked="true"
+            android:layout_gravity="center"
+            android:text="解除黑名单"
+            android:id="@+id/mBoxBlack"
+            android:background="@drawable/sel_btn_live_notice_stoke_30"
+            android:button="@null"
+            android:layout_width="90dp"
+            android:gravity="center"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <View style="@style/home_line"
+        android:layout_marginLeft="16dp"/>
+</LinearLayout>

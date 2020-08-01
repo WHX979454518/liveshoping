@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="钱将转入此支付宝账号，无法退款，请确保提现的支付宝账户名与实名认证一致"
+        android:textSize="12sp"
+        android:background="@color/main_color_bg"
+        android:singleLine="false"
+        android:textColor="@color/main_color"
+        android:padding="16dp"
+        style="@style/comm_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="?attr/item_bg_color"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/design_margin"
+        android:paddingRight="@dimen/design_margin">
+
+        <TextView
+            style="@style/comm_text"
+            android:text="支付宝账号"
+            android:textColor="@color/comm_text_color_black"
+            android:textSize="@dimen/comm_text_size_h" />
+
+        <EditText
+            android:id="@+id/mEtZfb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/please_input_zfb_id"
+            android:inputType="text"
+            android:textColor="@color/comm_text_color_black"
+            android:textColorHint="@color/comm_text_color_black_s"
+            android:textSize="@dimen/comm_text_size_h" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="?attr/item_bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:textSize="16sp"
+            android:text="@string/with_draw_num"
+            android:textColor="@color/comm_text_color_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/design_margin"
+            android:paddingRight="@dimen/design_margin">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="¥"
+                android:textColor="@color/comm_text_color_black"
+                android:textSize="@dimen/comm_text_size_title" />
+
+            <EditText
+                android:id="@+id/mEtMoney"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="number"
+                android:textColor="@color/comm_text_color_black"
+                android:hint="0"
+                android:textColorHint="@color/comm_text_color_black"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="@dimen/design_margin"
+            android:background="?attr/pageBg_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/design_margin"
+            android:paddingRight="@dimen/design_margin">
+
+
+            <TextView
+                android:id="@+id/mTvMoney"
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/comm_text_color_black" />
+
+            <TextView
+                android:id="@+id/mTvAllDraw"
+                style="@style/comm_text"
+                android:gravity="right"
+                android:layout_marginLeft="@dimen/design_margin"
+                android:layout_gravity="center_vertical"
+                android:text="@string/all_withdraw"
+                android:textColor="@drawable/select_main_black_s_color" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/mTvNext"
+        android:layout_width="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp_60"
+        android:background="@drawable/shape_soild_main_30"
+        android:textColor="@color/white"
+        android:text="@string/next_step"
+        android:gravity="center"/>
+</LinearLayout>

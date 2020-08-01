@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment_on_success" />
+
+    <TextView
+        android:id="@+id/mTvMsg"
+        style="@style/comm_text"
+        android:layout_marginTop="16dp"
+        android:text="评价成功"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            style="@style/comm_text"
+            android:background="@drawable/shape_stoke_main_30"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="8dp"
+            android:id="@+id/mTvOrder"
+            android:paddingRight="24dp"
+            android:text="查看订单"
+            android:textColor="@color/main_color"
+            android:textSize="16sp" />
+
+        <TextView
+            style="@style/comm_text"
+            android:background="@drawable/shape_soild_main_30"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:id="@+id/mTvMain"
+            android:textColor="@color/white"
+            android:paddingTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:paddingRight="24dp"
+            android:text="返回首页"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

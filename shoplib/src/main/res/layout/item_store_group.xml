@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/mLLBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/mBoxSel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/sel_goods_car"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mTvName"
+            style="@style/comm_text"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:text="asdasdasd"
+            android:textColor="@color/comm_text_color_black_s" />
+        <TextView
+            android:id="@+id/mTvNum"
+            style="@style/comm_text"
+            android:layout_margin="16dp"
+            android:text="asdasd"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/comm_text_color_black" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+</LinearLayout>
+
+    <!--android:drawableRight="@mipmap/more_list"-->

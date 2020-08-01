@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRlBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#41000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/tag_att"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="100dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="¥"
+
+                android:textColor="@color/comm_text_color_red" />
+
+            <TextView
+                android:id="@+id/mTvPrice"
+                style="@style/comm_text"
+                android:text="100"
+                android:textColor="@color/comm_text_color_red"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="bottom">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="库存："
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mTvNum"
+                style="@style/comm_text"
+                android:text="100"
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvIco"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/tag_att"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live_head"
+        app:placeholderImageScaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/tag_att"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mTvSure"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spec_recycler_view"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <!--<TextView-->
+            <!--android:id="@+id/mTvSecName"-->
+            <!--style="@style/comm_text"-->
+            <!--android:text="asdasdasasdasd"-->
+            <!--android:textColor="@color/comm_text_color_black_hs"-->
+            <!--android:textSize="14sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_tag"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginBottom="@dimen/dp_15"-->
+            <!--android:background="@drawable/sel_item_live"-->
+            <!--android:textColor="@color/sel_att_live"-->
+            <!--android:paddingBottom="4dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:paddingTop="4dp" />-->
+
+        <LinearLayout
+            android:id="@+id/mLLNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="4dp">
+
+            <ImageView
+                android:id="@+id/mIvMin"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="4dp"
+                android:onClick="onApplyBackClick"
+                android:src="@drawable/reduction" />
+
+            <TextView
+                android:id="@+id/mWillBuyNum"
+                style="@style/comm_text"
+                android:layout_height="28dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:textColor="#b6ffffff"
+                android:background="@drawable/shape_att"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:text="1"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mIvAdd"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:onClick="onApplyBackClick"
+                android:src="@drawable/add" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy_limit_number"
+            android:textSize="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_100"
+            android:text="购买限制"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvSure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_color"
+        android:gravity="center"
+        android:padding="12dp"
+        android:enabled="false"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

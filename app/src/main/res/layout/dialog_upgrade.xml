@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?attr/shap_white_radius_4"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/hint"
+        android:id="@+id/hint"
+
+        android:paddingLeft="@dimen/design_margin"
+        android:layout_marginTop="@dimen/design_margin"
+        android:textColor="@color/comm_text_color_black"
+        android:paddingTop="@dimen/design_margin_s"
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/design_margin_s"
+        android:textSize="@dimen/comm_text_size_h" />
+    <TextView
+        android:id="@+id/px_dialog_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hint"
+        android:layout_marginRight="@dimen/design_margin"
+        android:paddingTop="@dimen/design_margin"
+        android:paddingBottom="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/design_margin"
+        android:textColor="@color/comm_text_color_black_s"
+        android:textSize="@dimen/comm_text_size"  />
+
+
+    <RelativeLayout
+        android:id="@+id/dialog_btn_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/px_dialog_description"
+        android:visibility="visible">
+
+
+
+
+        <Button
+            android:id="@+id/px_dialog_ok"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/design_margin"
+            android:background="@null"
+            android:text="@string/ensure"
+            android:textColor="@color/comm_text_color_main"
+            android:textSize="16sp"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/px_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/design_margin"
+            android:layout_marginRight="@dimen/design_margin"
+            android:layout_toLeftOf="@id/px_dialog_ok"
+            android:background="@null"
+            android:text="@string/cancel"
+            android:textColor="@color/comm_text_color_black"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

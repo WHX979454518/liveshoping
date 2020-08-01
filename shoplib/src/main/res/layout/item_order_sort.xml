@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_order_user_msg" />
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mGoodsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTvStateMsg"
+            style="@style/comm_text"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="8dp"
+            android:text="共1件商品" />
+
+
+        <View style="@style/home_line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/mTvDelete"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:textColor="@color/comm_text_color_black"
+            android:text="删除订单"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mTvCancel"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:textColor="@color/comm_text_color_black"
+            android:text="取消订单"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mTvEva"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:textColor="@color/comm_text_color_black"
+            android:text="去评价"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/mTvQuery"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:textColor="@color/comm_text_color_black"
+            android:text="查看物流"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mTvToSend"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_main_30"
+            android:text="去发货"
+            android:textColor="@color/comm_bg_main"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mTvSure"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_main_30"
+            android:text="确认收货"
+            android:textColor="@color/comm_bg_main"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mTvPay"
+            style="@style/order_butten"
+            android:background="@drawable/shape_stoke_main_30"
+            android:text="去支付"
+            android:textColor="@color/comm_bg_main"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View style="@style/home_empty_bg" />
+
+</LinearLayout>

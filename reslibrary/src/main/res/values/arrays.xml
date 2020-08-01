@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="home_title">
+        <item>热门</item>
+        <item>最新</item>
+    </array>
+
+    <array name="search_title">
+        <item>直播</item>
+        <item>主播</item>
+    </array>
+    <array name="search_goods">
+        <item>商品</item>
+        <item>用户</item>
+        <item>店铺</item>
+    </array>
+    <array name="comsume_his">
+        <item>充值</item>
+        <item>消费</item>
+    </array>
+    <array name="collection">
+        <item>宝贝</item>
+        <item>店铺</item>
+    </array>
+    <array name="thestore">
+        <item>入驻店铺</item>
+        <item>我的店铺</item>
+    </array>
+    <array name="shop_list">
+        <item>默认</item>
+        <item>销量</item>
+        <item>信用</item>
+        <item>价格</item>
+    </array>
+
+    <array name="order_goods">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>待评价</item>
+    </array>
+
+    <array name="mine_title">
+        <item>资料</item>
+    </array>
+
+    <array name="mine_anchor_title">
+        <item>直播</item>
+        <item>资料</item>
+    </array>
+
+    <array name="rank_title">
+        <item>日榜</item>
+        <item>总榜</item>
+    </array>
+
+
+    <array name="anchor_lucky_title">
+        <item>群红包</item>
+    </array>
+
+    <array name="audience_lucky_title">
+        <item>送主播</item>
+        <item>群红包</item>
+    </array>
+
+    <array name="anchor_billy">
+        <item>收礼</item>
+        <item>送礼</item>
+        <item>充值</item>
+        <item>兑换</item>
+    </array>
+
+    <array name="user_billy">
+        <item>收礼</item>
+        <item>开播</item>
+        <item>邀请</item>
+    </array>
+    <array name="user_billy2">
+        <item>收礼</item>
+        <item>兑换银币</item>
+    </array>
+    <array name="user_billy_expense">
+        <item>送礼</item>
+        <item>观看直播</item>
+        <item>购买VIP</item>
+    </array>
+
+    <array name="contribution_title">
+        <item>贡献日榜</item>
+        <item>贡献总榜</item>
+        <item>分享榜</item>
+        <item>时长榜</item>
+    </array>
+
+
+    <!--走马灯-->
+    <declare-styleable name="MarqueeView">
+        <attr name="marqueeAnimDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleMarqueeView">
+        <attr name="smvTextColor" format="reference|color" />
+        <attr name="smvTextSize" format="dimension" />
+        <attr name="smvTextGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="smvTextSingleLine" format="boolean" />
+        <attr name="smvTextEllipsize">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+        </attr>
+
+    </declare-styleable>
+</resources>

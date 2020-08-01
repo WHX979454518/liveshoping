@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg">
+
+
+    <com.hn.library.refresh.PtrClassicFrameLayout
+        android:id="@+id/mRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_mode="both">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+
+                    android:gravity="center"
+                    android:padding="8dp">
+                    <!--android:background="@color/main_color"-->
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:id="@+id/mIvMsg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="8dp"
+                            android:src="@drawable/news1" />
+
+                        <com.hn.library.utils.HnBadgeView
+                            android:id="@+id/mTvNewMsg"
+                            android:layout_width="@dimen/design_margin_s"
+                            android:layout_height="@dimen/design_margin_s"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/live_unread_bg"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:layout_marginLeft="8dp"
+                        android:text="我"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/setting1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp"
+
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+                    <!--android:background="@color/main_color"-->
+                    <com.hn.library.view.FrescoImageView
+                        android:id="@+id/mIvIco"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:actualImageScaleType="centerCrop"
+                        app:placeholderImage="@mipmap/user_head_img"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:roundAsCircle="true" />
+
+                    <TextView
+                        android:id="@+id/mTvName"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_toRightOf="@+id/mIvIco"
+                        android:text="1213131"
+                        style="@style/comm_text"
+                        android:layout_marginLeft="8dp"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/mIvSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/women" />
+
+                    <com.reslibrarytwo.LevelView
+                        android:visibility="gone"
+                        android:id="@+id/mLevelView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp" />
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_alignParentRight="true"
+                        android:text="开始直播"
+                        android:padding="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:background="@drawable/bg_begintolive"
+                        android:layout_marginLeft="@dimen/dp_100"
+                        android:textSize="@dimen/sp_11"
+                        android:textColor="@color/livetext_color"
+                        android:id="@+id/tv_begin_live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:visibility="gone"
+                        layout="@layout/item_user_top" />
+
+                    <View style="@style/home_empty_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:background="@color/white"
+                            android:id="@+id/mLLBuyer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:layout_weight="1"
+                                android:text="我的订单" />
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:drawableRight="@mipmap/more_list"
+                                android:text="查看全部订单"
+                                android:textColor="@color/comm_text_color_black_s"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <!--<View style="@style/home_line" />-->
+                        <View style="@style/home_empty_bg" />
+
+                        <include layout="@layout/item_user_shop" />
+                        <View style="@style/home_empty_bg" />
+                        <include layout="@layout/item_user_shop_info" />
+                        <View style="@style/home_empty_bg" />
+                        <include layout="@layout/item_user_help_fuction_layout" />
+                        <include layout="@layout/item_user_fuction_two_layout" />
+
+                    </LinearLayout>
+
+
+                    <!--<View-->
+                        <!--style="@style/home_empty_bg" />-->
+                    <View
+                        android:visibility="gone"
+                        style="@style/home_matchempty_bg" />
+
+
+                    <LinearLayout
+                        android:id="@+id/mLLAuthentication"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:layout_weight="1"
+                            android:text="我要认证" />
+
+                        <TextView
+                            android:id="@+id/mTvAuth"
+                            style="@style/comm_text"
+                            android:drawableRight="@mipmap/more_list"
+                            android:text="未认证"
+                            android:textColor="@color/comm_text_color_black_s" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mLLAnchorAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:layout_weight="1"
+                            android:text="主播相关" />
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:drawableRight="@mipmap/more_list"
+                            android:textColor="@color/comm_text_color_black_s" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            style="@style/home_line"
+                            android:layout_marginLeft="16dp" />
+
+                        <LinearLayout
+                            android:id="@+id/mLLSeller"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:layout_weight="1"
+                                android:text="我的店铺" />
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:drawableRight="@mipmap/more_list"
+                                android:text=""
+                                android:textColor="@color/comm_text_color_black_s" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            style="@style/home_line"
+                            android:layout_marginLeft="16dp" />
+
+                        <LinearLayout
+                            android:id="@+id/mLLLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:layout_weight="1"
+                                android:text="我的等级" />
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:drawableRight="@mipmap/more_list"
+                                android:text=""
+                                android:textColor="@color/comm_text_color_black_s" />
+
+                        </LinearLayout>
+
+                        <View style="@style/home_empty_bg" />
+
+
+                        <LinearLayout
+                            android:id="@+id/mLLSign"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:text="签到" />
+
+                            <ImageView
+                                android:id="@+id/mIvSign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:src="@mipmap/live_red_dian" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:drawableRight="@mipmap/more_list"
+                                android:text=""
+                                android:textColor="@color/comm_text_color_black_s" />
+                        </LinearLayout>
+
+                        <View style="@style/home_empty_bg" />
+
+
+                        <LinearLayout
+                            android:id="@+id/mLLAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:layout_weight="1"
+                                android:text="账户" />
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:drawableRight="@mipmap/more_list"
+                                android:text=""
+                                android:textColor="@color/comm_text_color_black_s" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/home_line"
+                            android:layout_marginLeft="16dp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/mLLEarnings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:layout_weight="1"
+                                android:text="收益" />
+
+                            <TextView
+                                style="@style/comm_text"
+                                android:drawableRight="@mipmap/more_list"
+                                android:text=""
+                                android:textColor="@color/comm_text_color_black_s" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/home_empty_bg"
+                            android:layout_weight="1"
+                            android:minHeight="10dp" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.hn.library.refresh.PtrClassicFrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mLLTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:id="@+id/mIvMsg2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/news" />
+
+                <com.hn.library.utils.HnBadgeView
+                    android:id="@+id/mTvNewMsg2"
+                    android:layout_width="@dimen/design_margin_s"
+                    android:layout_height="@dimen/design_margin_s"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/live_unread_bg"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="我"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <ImageView
+                android:id="@+id/mIvSetting2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:src="@drawable/setting" />
+
+        </LinearLayout>
+
+        <View style="@style/home_line" />
+    </LinearLayout>
+
+</RelativeLayout>

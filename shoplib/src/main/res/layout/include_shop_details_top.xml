@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_collapseMode="parallax">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mBannerPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:id="@+id/mLLDot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="4dp" />
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:onClick="onShopDetailsClick"
+            android:padding="4dp"
+            android:src="@drawable/ic_back_left" />
+
+        <ImageView
+            android:id="@+id/mIvShare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:onClick="onShopDetailsClick"
+            android:padding="4dp"
+            android:src="@drawable/ic_shop_share" />
+
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/mIvShare">
+
+            <ImageView
+                android:id="@+id/mIvShopCats"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="onShopDetailsClick"
+                android:padding="4dp"
+                android:src="@drawable/ic_shop_car" />
+
+
+            <ImageView
+                android:id="@+id/mIvAddGoodsNew2"
+                android:layout_width="@dimen/design_margin_s"
+                android:layout_height="@dimen/design_margin_s"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/ic_red_dian"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/design_margin_s"
+        android:paddingRight="@dimen/design_margin_s">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvStoreName"
+                style="@style/comm_text"
+                tools:text="asdasdasdasdassd阿阿萨斯的大的萨斯的" />
+
+            <TextView
+                android:id="@+id/mTvTag"
+                style="@style/comm_text"
+                android:text="直播中..."
+                android:textColor="@color/comm_text_color_red"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvStoreNum"
+                style="@style/comm_text"
+                android:text="0" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="2dp"
+                android:text="商品"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvSaleNum"
+                style="@style/comm_text"
+                android:text="0" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="2dp"
+                android:text="销量"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvFanNum"
+                style="@style/comm_text"
+                android:text="0" />
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="2dp"
+                android:text="粉丝"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/home_line" />
+
+    <TextView
+        android:id="@+id/mTvAddress"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:drawableLeft="@drawable/positioning_b"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="@dimen/design_margin_s"
+        android:text="" />
+
+    <View
+        android:id="@+id/mViewAnno"
+        style="@style/home_empty_bg" />
+
+    <TextView
+        android:id="@+id/mTvAnno"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/def_height"
+        android:drawableLeft="@drawable/ic_shop_anno"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="@dimen/design_margin_s"
+        android:text="" />
+
+    <View
+        android:id="@+id/mViewBack"
+        style="@style/home_empty_bg" />
+
+    <LinearLayout
+        android:id="@+id/mLLBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="@dimen/design_margin_s">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:text="店铺回放" />
+
+        <TextView
+            android:id="@+id/mTvMore"
+            style="@style/comm_text"
+            android:drawableRight="@mipmap/more_list"
+            android:gravity="center"
+            android:onClick="onShopDetailsClick"
+            android:text="更多"
+            android:textColor="@color/comm_text_color_black_s" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mBackRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:padding="8dp" />
+
+    <View style="@style/home_empty_bg" />
+
+</LinearLayout>

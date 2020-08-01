@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/mRlSearch_layout"
+            android:background="@color/main_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/shop_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/shop_logo" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/mRlSearch"
+                android:layout_marginLeft="6dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/shop_logo"
+                android:layout_marginRight="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_search_grey"
+                android:drawablePadding="8dp"
+                android:text="搜索您想要的内容"
+                android:textColor="@color/color_aaaaaa" />
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/message_layout"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp">
+
+                <ImageView
+                    android:id="@+id/mIvMsg"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:scaleType="centerCrop"
+                    android:padding="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/message_notice" />
+
+                <com.hn.library.utils.HnBadgeView
+                    android:id="@+id/mTvNewMsg"
+                    android:layout_width="@dimen/design_margin_s"
+                    android:layout_height="@dimen/design_margin_s"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/live_unread_bg"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.hn.library.tab.SlidingTabLayout
+            android:id="@+id/home_sliding_tab"
+            android:layout_width="match_parent"
+            android:layout_below="@id/mRlSearch_layout"
+            android:paddingBottom="@dimen/dp_8"
+            android:layout_height="45dp"
+            android:background="@color/main_color"
+            tl:tl_divider_color="#1Affffff"
+            tl:tl_divider_padding="16dp"
+            tl:tl_indicator_color="@color/white"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_padding="@dimen/design_margin"
+            tl:tl_tab_space_equal="false"
+            tl:tl_textSelectColor="#ffffff"
+            tl:tl_textUnselectColor="#ffffff"
+            tl:tl_textsize="@dimen/comm_text_size_h"
+            tl:tl_underline_color="#1Affffff"
+            tl:tl_underline_height="0dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:id="@+id/spilit_line"
+            android:background="@color/main_color"
+            android:layout_below="@id/home_sliding_tab"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spilit_line"
+            android:id="@+id/goods_list_viewpager"
+            >
+        </androidx.viewpager.widget.ViewPager>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

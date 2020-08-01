@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:layout_marginTop="@dimen/design_margin_h"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_marginLeft="@dimen/design_margin_s"
+        android:layout_height="130dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:actualImageScaleType="centerCrop"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live"
+            app:roundAsCircle="false" />
+
+        <TextView
+            android:id="@+id/mTvState"
+            style="@style/comm_text"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_live"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:text="直播中"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/mTvNum"
+            style="@style/comm_text"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:shadowColor="@color/comm_text_color_black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="10"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/mTvTitle"
+            style="@style/comm_text"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:singleLine="false"
+            android:textSize="@dimen/comm_text_size"
+            android:text="asdasdsadasasdas" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/mTvTop1"
+                style="@style/comm_text"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_stroke_main_30"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="asdasdasdasdasdasd"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/mTvTop2"
+                style="@style/comm_text"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_stroke_main_30"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="10"
+                android:textColor="@color/main_color"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/mTvAddress"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/positioning_black"
+            android:drawablePadding="4dp"
+            android:textSize="@dimen/comm_text_size_s"
+            android:textColor="@color/comm_text_color_black"
+            android:text="" />
+
+    </LinearLayout>
+
+</LinearLayout>

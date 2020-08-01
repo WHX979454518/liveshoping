@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/windows_bg"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_5">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/shop_introduce_img"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/shop_defalut_face"
+        app:roundBottomLeft="false"
+        app:roundBottomRight="false"
+        app:roundTopLeft="true"
+        app:roundTopRight="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingBottom="@dimen/dp_11"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_8">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/shop_head_img"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="16dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/moren"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_toRightOf="@id/shop_head_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="森林狼官方旗舰店"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/shop_introduce_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:text="1188件商品 45.5万人收藏 "
+                android:textColor="#ffaaaaaa"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/enter_shop"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/recommend_shop_enter_shop"
+            android:padding="@dimen/dp_6"
+            android:text="进入店铺"
+            android:textColor="#fff40a03"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+</LinearLayout>

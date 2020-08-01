@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    tools:background="#e97d7d">
+
+    <TextView
+        android:id="@+id/mTvSecName"
+        style="@style/comm_text"
+        android:text="asdasdasasdasd"
+        android:textColor="@color/comm_text_color_black_hs"
+        android:textSize="14sp" />
+
+    <com.live.shoplib.widget.FlowTag.FlowTagLayout
+        android:id="@+id/mSecRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:id="@+id/mLLNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:id="@+id/mIvMin"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="4dp"
+            android:onClick="onApplyBackClick"
+            android:src="@drawable/reduction" />
+
+        <TextView
+            android:id="@+id/mTvNum"
+            style="@style/comm_text"
+            android:layout_height="28dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textColor="#b6ffffff"
+            android:background="@drawable/shape_att"
+            android:gravity="center"
+            android:minWidth="40dp"
+            android:text="1"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/mIvAdd"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:onClick="onApplyBackClick"
+            android:src="@drawable/add" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

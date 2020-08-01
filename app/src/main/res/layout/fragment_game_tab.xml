@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.hn.library.loadstate.HnLoadingLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_70"
+        app:isFirstVisible="true">
+        <com.hn.library.refresh.PtrClassicFrameLayout
+            android:id="@+id/ptr_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptr_mode="both">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </com.hn.library.refresh.PtrClassicFrameLayout>
+    </com.hn.library.loadstate.HnLoadingLayout>
+
+    <LinearLayout
+        android:id="@+id/mLlMark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:minHeight="70dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/item_bg_color"
+            android:paddingBottom="@dimen/design_margin_ss"
+            android:paddingLeft="@dimen/design_margin"
+            android:paddingRight="@dimen/design_margin"
+            android:paddingTop="@dimen/design_margin_s"></androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/mIvAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/design_margin_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/under_games" />
+        <LinearLayout
+            android:id="@+id/mViewMark"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

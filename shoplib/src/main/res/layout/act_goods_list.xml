@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.hn.library.tab.SlidingTabLayout
+            xmlns:tl="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mSlidView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/design_margin_ss"
+            android:paddingTop="@dimen/design_margin_ss"
+            tl:tl_divider_color="@color/main_color"
+            tl:tl_divider_padding="16dp"
+            tl:tl_indicator_color="@color/white"
+            tl:tl_indicator_height="0dp"
+            tl:tl_indicator_width_equal_title="true"
+            android:background="@color/white"
+            tl:tl_tab_padding="@dimen/design_margin"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textSelectColor="@color/main_color"
+            tl:tl_textUnselectColor="@color/comm_text_color_black"
+            android:layout_marginBottom="1dp"
+            tl:tl_textsize="@dimen/comm_text_size_h"
+            tl:tl_underline_color="@color/main_color"
+            tl:tl_underline_height="0dp" />
+
+        <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<com.hn.library.tab.SlidingTabLayout xmlns:tl="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/mSlidView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingBottom="@dimen/design_margin_ss"-->
+        <!--android:paddingTop="@dimen/design_margin_ss"-->
+        <!--tl:tl_divider_color="@color/main_color"-->
+        <!--tl:tl_divider_padding="16dp"-->
+        <!--tl:tl_indicator_color="@color/white"-->
+        <!--tl:tl_indicator_height="0dp"-->
+        <!--tl:tl_indicator_width_equal_title="true"-->
+        <!--android:background="@color/white"-->
+        <!--tl:tl_tab_padding="@dimen/design_margin"-->
+        <!--tl:tl_tab_space_equal="true"-->
+        <!--tl:tl_textSelectColor="@color/main_color"-->
+        <!--tl:tl_textUnselectColor="@color/comm_text_color_black"-->
+        <!--android:layout_marginBottom="1dp"-->
+        <!--tl:tl_textsize="@dimen/comm_text_size_h"-->
+        <!--tl:tl_underline_color="@color/main_color"-->
+        <!--tl:tl_underline_height="0dp" />-->
+
+
+    <!--<com.live.shoplib.widget.NoHorizontalViewpager-->
+        <!--android:id="@+id/mViewPager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+<!--</LinearLayout>-->

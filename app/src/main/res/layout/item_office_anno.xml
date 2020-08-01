@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="assdasdlkjhhgfjhsdagfjhsdgfksdbrwjkejbuhyvcjhsbdkljashdlkhaskljdhblkjkjaasds"
+                android:textColor="@color/comm_text_color_black" />
+
+
+            <TextView
+                android:id="@+id/mTvDate"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="asdasdsadasdasdsaadasd"
+                android:textColor="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="8dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_banner"
+            app:placeholderImageScaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/home_line"
+        android:layout_marginLeft="16dp" />
+
+
+</LinearLayout>

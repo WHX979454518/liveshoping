@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mTvDate1"
+                style="@style/comm_text"
+                android:text="1000" />
+            <TextView
+                android:id="@+id/mTvDate2"
+                android:layout_marginTop="2dp"
+                style="@style/comm_text"
+                android:textSize="12sp"
+                android:textColor="@color/comm_text_color_black_s"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/mIvType"
+                android:layout_width="wrap_content"
+                android:src="@drawable/wechat_pay"
+                android:layout_marginRight="8dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/mTvMoney"
+                    style="@style/comm_text"
+                    android:text="1000" />
+                <TextView
+                    android:id="@+id/mTvCoin"
+                    android:layout_marginTop="2dp"
+                    style="@style/comm_text"
+                    android:textSize="12sp"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:text="" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.6"
+            android:gravity="right|center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mTvState"
+                style="@style/comm_text"
+                android:text="充值成功" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View style="@style/home_line" />
+
+</LinearLayout>

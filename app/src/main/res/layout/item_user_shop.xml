@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    tools:showIn="@layout/frag_user">
+
+    <RelativeLayout
+        android:id="@+id/mRlPay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/mTvShopWaitPay"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ord_payment"
+            android:text="待付款"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitPayNum"
+            style="@style/user_item_shop_num" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mRlDeliver"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/mTvShopWaitDeliver"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ord_delivery"
+            android:text="待发货"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitDeliverNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mRlGet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/mTvShopWaitGet"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ord_goods"
+            android:text="待收货"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvWaitGetNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mRlEvaluate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/mTvShopEvaluate"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ord_evaluation"
+            android:text="待评价"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvEvaluateNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mRlRefund"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/mTvShopGoods"
+            style="@style/user_item_shop"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ord_refund"
+            android:text="售后"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvRefundNum"
+            style="@style/user_item_shop_num" />
+    </RelativeLayout>
+
+
+</LinearLayout>

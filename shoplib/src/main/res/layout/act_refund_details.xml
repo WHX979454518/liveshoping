@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/refund_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvType"
+                style="@style/comm_text"
+                android:text="申请退款"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mTvDate"
+                style="@style/comm_text"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                tools:text="2018-8-8" />
+
+            <TextView
+                android:id="@+id/mTvRefuseMsg"
+                style="@style/comm_text"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                tools:text="2018-8-8" />
+
+        </LinearLayout>
+
+        <View style="@style/home_empty_bg" />
+
+        <TextView
+            android:id="@+id/mTvReason"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:singleLine="false"
+            tools:text="asdasdasdasdas撒大大大大撒卡手机卡asdasdasdasdas撒大大大大撒卡手机卡是多少asdasdasdasdas撒大大大大撒卡手机卡是多少asdasdasdasdas撒大大大大撒卡手机卡是多少是多少" />
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="退款总金额" />
+
+
+            <TextView
+                android:id="@+id/tag_unit"
+                style="@style/comm_text"
+                android:text="¥"
+                android:textColor="@color/main_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mTvMoney"
+                style="@style/comm_text"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/main_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="100000asdasdasdsad" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="退款类型" />
+
+
+            <TextView
+                android:id="@+id/mTvRefundType"
+                style="@style/comm_text"
+                android:layout_marginLeft="2dp"
+                android:textSize="14sp"
+                tools:text="仅退款" />
+
+        </LinearLayout>
+
+        <View style="@style/home_empty_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp"
+                android:text="退款信息" />
+
+            <TextView
+                android:id="@+id/mTvAddAddress"
+                style="@style/comm_text"
+                android:drawablePadding="4dp"
+                android:drawableRight="@drawable/back_right_main"
+                android:gravity="center"
+                android:onClick="onRefundDetails"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp"
+                android:text="填写退货单号"
+                android:textColor="@color/main_color"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View style="@style/home_line" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mLLGoods"
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRefundDetails">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvGoodsIco"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/default_live_head"
+                app:placeholderImageScaleType="centerCrop" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvGoodsName"
+                    style="@style/comm_text"
+                    android:lines="2"
+                    android:singleLine="false"
+                    android:text=" " />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/mTvGoodsMsg"
+                        style="@style/comm_text"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/comm_text_color_black_s" />
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:text="x"
+                        android:textColor="@color/comm_text_color_black_hs"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/mTvGoodsNum"
+                        style="@style/comm_text"
+                        android:layout_marginLeft="2dp"
+                        android:text="1"
+                        android:textColor="@color/comm_text_color_black_hs"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTvApplyDate"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="2018-8-8"
+                android:textColor="@color/comm_text_color_black_hs" />
+
+            <TextView
+                android:id="@+id/mTvRefunId"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:text="189494949"
+                android:textColor="@color/comm_text_color_black_hs" />
+        </LinearLayout>
+
+        <View style="@style/home_line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/mTvConnection"
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/shop_chat"
+                android:drawablePadding="8dp"
+                android:onClick="onRefundDetails"
+                android:paddingBottom="16dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:text="联系卖家"
+                android:textColor="@color/comm_text_color_black" />
+
+
+            <View
+                android:id="@+id/mLineTag"
+                style="@style/home_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/mTvLog"
+                style="@style/comm_text"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/view_logistics"
+                android:drawablePadding="8dp"
+                android:onClick="onRefundDetails"
+                android:paddingBottom="16dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:text="查看物流"
+                android:textColor="@color/comm_text_color_black"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/home_empty_bg"
+            android:layout_height="20dp" />
+
+
+        <LinearLayout
+            android:id="@+id/mLLSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/mTvRefuse"
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRefundDetails"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp"
+                android:text="拒绝"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/mLineTag2"
+                style="@style/home_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mTvAgree"
+                style="@style/comm_text"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRefundDetails"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp"
+                android:text="同意"
+                android:textColor="@color/main_color"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

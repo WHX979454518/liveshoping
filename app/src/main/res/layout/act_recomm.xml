@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="468dp"
+        android:layout_margin="30dp"
+        android:clipChildren="false" />
+
+    <include layout="@layout/empty_data_layout"/>
+
+</RelativeLayout>

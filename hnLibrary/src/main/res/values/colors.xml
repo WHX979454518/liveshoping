@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--白天模式主题色-->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#fd648f</color>
+    <!--<color name="main_color">#fd648f</color>-->
+    <color name="blue_color">#6699FF</color>
+    <color name="main_color">#F92406</color>
+    <color name="main_color_bg">#f4dbe2</color>
+    <color name="windows_bg">#f5f5f5</color>
+    <color name="f5f5f5">#f5f5f5</color>
+    <color name="f6f6f6">#f5f5f5</color>
+    <color name="f0f0f0">#f0f0f0</color>
+    <color name="toolbar_title">#333333</color>
+    <color name="id_image_stroke">#E2E2E2</color>
+
+    <!--夜间模式主题色-->
+    <color name="colorPrimary_dark">#202427</color>
+    <color name="colorPrimaryDark_dark">#202427</color>
+    <color name="colorAccent_dark">#fd648f</color>
+    <color name="main_dark_color">#202427</color>
+    <color name="windows_dark_bg">#1c2023</color>
+    <color name="id_image_stroke_dark">#434546</color>
+
+    <!--其它颜色-->
+    <color name="black">#000000</color>
+    <color name="black_tran">#333333</color>
+    <color name="home_line">#dddd</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_tran">#8cffffff</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_999999_tran">#78999999</color>
+    <color name="goods_details_1">#fcd63d</color>
+    <color name="goods_details_2">#fd648f</color>
+    <color name="goods_details_3">#FE407C</color>
+    <color name="goods_details_4">#FFEBCE</color>
+    <color name="goods_details_5">#FFAB32</color>
+    <color name="goods_details_6">#FB7F42</color>
+
+    <color name="spike_select">#F92406</color>
+    <!--<color name="spike_unselect">#F22F6D</color>-->
+    <color name="spike_unselect">#49343A</color>
+
+
+    <color name="translucent_background">#00000000</color>
+    <color name="first_text_525252">#ff525252</color>
+    <color name="first_text_424242">#ff424242</color>
+    <color name="second_text_AEAEAE">#ffAEAEAE</color>
+    <color name="list_divider_D2D2D2">#ffececec</color>
+    <color name="px_loading_dialog_bg">#9c000000</color>
+    <color name="md_grey">#FF888888</color>
+    <color name="base_text_color_light">#909090</color>
+    <color name="base_loading_background">#f7f7f7</color>
+    <color name="auth_photo_bg">#e5e5e5</color>
+
+
+    <!--字体颜色-->
+    <color name="comm_text_color_black">#333333</color>
+    <color name="comm_text_color_black_hs">#666666</color>
+    <color name="comm_text_color_black_s">#999999</color>
+    <color name="comm_text_color_black_ss">#cccccc</color>
+    <color name="comm_text_color_tips">#828282</color>
+    <color name="comm_text_color_red">#f31b1b</color>
+    <color name="comm_text_color_red_s">#f23535</color>
+    <color name="comm_text_color_blue">#5775c0</color>
+    <color name="comm_text_color_blue_s">#11b7f3</color>
+    <color name="comm_text_color_blue_hs">#5486cb</color>
+    <color name="comm_text_color_yellow_h">#fcc3a7</color>
+    <color name="comm_text_color_white">#ffffff</color>
+    <color name="comm_text_color_main">#fd648f</color>
+    <color name="comm_text_color_main_s">#d45478</color>
+    <color name="comm_hint_text_color">#999999</color>
+    <color name="comm_hint_text_color_s">#cccccc</color>
+    <!--公共背景颜色-->
+    <color name="comm_bg_empty">@color/comm_bg_area</color>
+    <color name="comm_bg_area">#ebebeb</color>
+    <color name="comm_bg_line">#d6d7dc</color>
+    <color name="comm_bg_black">@color/alp_black</color>
+    <color name="comm_bg_main">#fd648f</color>
+    <color name="comm_bg_white_s">#f5f5f5</color>
+    <color name="comm_bg_grayness">@color/comm_text_color_black_ss</color>
+    <!--线-->
+    <color name="comm_line_main">#fd648f</color>
+    <color name="comm_line_black">@color/comm_text_color_black</color>
+    <color name="comm_line_black_s">@color/comm_text_color_black_s</color>
+    <color name="comm_line_white_s">#f5f5f5</color>
+    <!--直播间公聊-->
+    <color name="comm_live_gife_msg">#fdc244</color>
+    <color name="comm_live_notice_msg">#00ad34</color>
+    <color name="comm_live_live_up">#f73030</color>
+    <color name="comm_live_dianzan">#fb7a52</color>
+    <color name="comm_live_in_room">#f74dc1</color>
+    <color name="comm_live_out_room">#fdc244</color>
+    <color name="comm_live_bind_chat">#f73030</color>
+    <color name="comm_live_take_out">#f73030</color>
+
+
+    <!--透明色调-->
+    <color name="alp_white">#1effffff</color>
+    <color name="alp_white_s">#80ffffff</color>
+    <color name="alp_black">#1e000000</color>
+    <color name="alp_black_s">#80000000</color>
+    <color name="alp_black_ss">#00000000</color>
+    <color name="shopdetailss_color">#C3C3C3</color>
+    <color name="shopdetailss_line_color">#EAEAEA</color>
+    <color name="button_color">#FF645F</color>
+    <color name="phone_color">#0095CC</color>
+    <color name="live_color">#FFF7F7</color>
+    <color name="livetext_color">#F40A03</color>
+
+</resources>

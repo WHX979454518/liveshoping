@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hn.library.view.FrescoImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_100"
+    app:actualImageScaleType="centerCrop"
+    app:placeholderImage="@drawable/default_live"
+    app:placeholderImageScaleType="centerCrop"
+    app:roundBottomLeft="true"
+    app:roundBottomRight="true"
+    app:roundTopLeft="true"
+    app:roundTopRight="true"
+    app:roundedCornerRadius="8dp"
+    >
+
+</com.hn.library.view.FrescoImageView>

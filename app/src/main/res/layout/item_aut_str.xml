@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+
+    <com.reslibrarytwo.HnSkinTextView
+        android:id="@+id/mTvMsg"
+        android:text="啊傻傻大"
+        android:paddingBottom="12dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:layout_width="match_parent"
+        style="@style/comm_text"/>
+
+    <View
+        style="@style/home_line"/>
+
+</LinearLayout>

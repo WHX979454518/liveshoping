@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:id="@+id/mTvCoin"
+            android:text="xxx" />
+
+        <TextView
+            style="@style/comm_text"
+            android:paddingTop="4dp"
+            android:id="@+id/mTvSubmit"
+            android:layout_width="90dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@color/sel_exchange_color"
+            android:background="@drawable/sel_exchange"
+            android:text="xxx" />
+
+
+    </LinearLayout>
+
+    <View style="@style/home_line" />
+
+</LinearLayout>

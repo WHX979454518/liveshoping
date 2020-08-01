@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="360dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/mLLGoods"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvIco"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="8dp"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/default_live_head"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:id="@+id/mTvGoodsName"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="adasdasdasdsdasdasdasadasdasdasdsdasdasdasadasdasdasdsdasdasdas"
+                    android:textColor="@color/comm_text_color_black_hs"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom">
+
+                    <TextView
+                        style="@style/comm_text"
+                        android:text="¥"
+                        android:textColor="@color/comm_text_color_main" />
+
+                    <TextView
+                        android:id="@+id/mTvPrice"
+                        style="@style/comm_text"
+                        android:text="adasdasdasdsdasdasdasadasdasdasdsdasdasdasadasdasdasdsdasdasdas"
+                        android:textColor="@color/comm_text_color_main"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white_tran" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white_tran" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/mTvCar"
+                android:enabled="false"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/shape_stoke_main_30"
+                android:text="加入购物车"
+                android:textColor="@color/comm_text_color_main"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:id="@+id/mTvBug"
+                android:gravity="center"
+                android:enabled="false"
+                android:background="@drawable/sel_btn_shop_soild_gray_30"
+                android:text="立即购买"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

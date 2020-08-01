@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/default_live_head"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true"/>
+
+        <TextView
+            android:id="@+id/mTvShopName"
+            style="@style/comm_text"
+            android:layout_marginLeft="8dp"
+            android:text="" />
+
+        <com.reslibrarytwo.LevelView
+            android:id="@+id/mLevelView"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco1"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/gift_loading"
+            app:placeholderImageScaleType="centerCrop" />
+
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco2"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/gift_loading"
+            app:placeholderImageScaleType="centerCrop" />
+
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/mIvIco3"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/gift_loading"
+            app:placeholderImageScaleType="centerCrop" />
+
+    </LinearLayout>
+
+</LinearLayout>

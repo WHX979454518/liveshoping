@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_width="80dp"
+            android:text="收货人"
+            android:textColor="@color/comm_text_color_black_s" />
+
+        <EditText
+            android:id="@+id/mEdName"
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入姓名"
+            android:textColor="@color/comm_text_color_black"
+            android:textColorHint="@color/comm_text_color_black_ss" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_width="80dp"
+            android:text="手机号码"
+
+            android:textColor="@color/comm_text_color_black_s" />
+
+        <EditText
+            android:id="@+id/mEdPhone"
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入收货人手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColor="@color/comm_text_color_black"
+            android:textColorHint="@color/comm_text_color_black_ss" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_width="80dp"
+            android:text="所在地区"
+
+            android:textColor="@color/comm_text_color_black_s" />
+
+        <TextView
+            android:id="@+id/mEdArea"
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请点击选择送货区域"
+            android:textColor="@color/comm_text_color_black"
+            android:textColorHint="@color/comm_text_color_black_ss" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_width="80dp"
+
+            android:text="详细地址"
+            android:textColor="@color/comm_text_color_black_s" />
+
+        <EditText
+            android:id="@+id/mEdAddress"
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入街道、小区等"
+            android:textColor="@color/comm_text_color_black"
+            android:textColorHint="@color/comm_text_color_black_ss" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            style="@style/home_line"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mLLDef"
+        style="@style/cus_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <CheckBox
+            android:id="@+id/mBoxDef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:button="@null"
+            android:text="  默认地址"
+            android:textColor="@color/comm_text_color_black_hs"
+            android:drawableLeft="@drawable/sel_apply_back" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

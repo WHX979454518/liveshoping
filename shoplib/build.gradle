@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+def config = rootProject.ext
+android {
+    compileSdkVersion config.compileSdkVersion
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled true
+        //Arouter 路由框架配置，用于在module之内、或不同module之间进行跳转
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //公共库
+    api project(':reslibrary')
+
+    api config.arouter
+    annotationProcessor config.areoutetCompile
+
+    api(name: 'LiteAVSDK_Professional_3.4.1797', ext: 'aar')
+//    api(name: 'LiteAVSDK_Player_6.6.7458', ext: 'aar')
+//    api(name: 'lib_tcsuperplayer', ext: 'aar')
+
+    //加载视频和图片在banner中用的
+//    implementation 'com.github.bumptech.glide:glide:4.0.0'
+    implementation 'com.danikula:videocache:2.7.0'
+}

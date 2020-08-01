@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hn.library.loadstate.HnLoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mHnLoadingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg"
+    android:orientation="vertical"
+    app:isFirstVisible="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/ll_edit_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_skin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/skin"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/me"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/mRlHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginTop="@dimen/def_height">
+
+
+                    <com.hn.library.view.FrescoImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/design_margin"
+                        app:actualImageScaleType="centerCrop"
+                        app:placeholderImage="@drawable/default_live_head"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:roundAsCircle="true" />
+
+                    <ImageView
+                        android:id="@+id/iv_withdrawalsuccessful"
+                        android:layout_width="@dimen/dp_17"
+                        android:layout_height="@dimen/dp_17"
+                        android:layout_alignBottom="@+id/iv_icon"
+                        android:layout_alignRight="@+id/iv_icon"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:background="@drawable/icon_v"
+                        android:visibility="invisible" />
+
+
+                    <ImageView
+                        android:id="@+id/mIvEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/design_margin_h"
+                        android:padding="@dimen/dp_10"
+                        android:src="@mipmap/more_list"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toLeftOf="@id/mIvEdit"
+                        android:layout_toRightOf="@id/iv_icon"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tv_nick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxWidth="160dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black_tran"
+                                android:textSize="@dimen/comm_title_text_size"
+                                android:textStyle="bold"
+                                tools:text="牵牛花的春天" />
+
+
+                            <com.reslibrarytwo.HnSkinTextView
+                                android:id="@+id/tv_level"
+                                android:layout_width="@dimen/design_margin_lv_w"
+                                android:layout_height="@dimen/design_margin_lv_h"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/tv_level_shape_1"
+                                android:drawableLeft="@drawable/stars"
+                                android:gravity="center"
+                                android:paddingLeft="2dp"
+                                android:singleLine="true"
+                                android:textColor="@color/comm_text_color_white"
+                                android:textSize="@dimen/comm_text_size_sh"
+                                tools:text="0" />
+
+                            <TextView
+                                android:id="@+id/tv_live_level"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@mipmap/level_bg"
+                                android:drawablePadding="2dp"
+                                android:paddingBottom="0.7dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="0.7dp"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone"
+                                tools:text="0" />
+
+                            <ImageView
+                                android:id="@+id/iv_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:background="@mipmap/man" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_uid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_15"
+                            android:layout_below="@+id/ll_info"
+                            android:layout_marginTop="@dimen/design_margin_h"
+                            android:textColor="@color/comm_text_color_black"
+                            android:textSize="@dimen/comm_text_size_s"
+                            tools:text="优号:00000" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mRlHead"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/design_margin"
+                    android:layout_marginRight="@dimen/design_margin"
+                    android:layout_marginTop="@dimen/design_margin"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/no_intro"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="@dimen/sp_13" />
+
+
+                <ImageView
+                    android:id="@+id/mIvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/design_margin_h"
+                    android:padding="10dp"
+                    android:src="@drawable/news" />
+
+                <com.hn.library.utils.HnBadgeView
+                    android:id="@+id/mTvNewMsg"
+                    android:layout_width="@dimen/design_margin_s"
+                    android:layout_height="@dimen/design_margin_s"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/live_unread_bg"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlCenter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/def_height"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/design_margin"
+                android:paddingRight="@dimen/design_margin">
+
+                <LinearLayout
+                    android:id="@+id/ll_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+
+                    android:background="?attr/actionBarItemBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_fans_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black_tran"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/design_margin_h"
+                        android:text="@string/fans"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/comm_text_size_s" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_care"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_34"
+                    android:layout_toRightOf="@id/ll_fans"
+                    android:background="?attr/actionBarItemBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_car_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black_tran"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/design_margin_h"
+                        android:text="@string/care"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/comm_text_size_s" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/mTvRecharge"
+                    style="@style/comm_text"
+                    android:layout_width="66dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_soild_main_30"
+                    android:gravity="center"
+                    android:text="@string/recharge"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvAnchorRelated"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:background="@color/white"
+                    android:drawableRight="@mipmap/more_list"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/design_margin"
+                    android:paddingRight="@dimen/design_margin"
+                    android:text="@string/anchor_related"
+                    android:textColor="@color/comm_text_color_black"
+
+                    android:textSize="@dimen/comm_text_size_h" />
+
+                <TextView
+                    android:id="@+id/mTvPlatFormList"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/white"
+                    android:drawableRight="@mipmap/more_list"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/design_margin"
+                    android:paddingRight="@dimen/design_margin"
+                    android:text="@string/platform_list"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="@dimen/comm_text_size_h" />
+
+                <TextView
+                    android:id="@+id/mTvMember"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:drawableRight="@mipmap/more_list"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/design_margin"
+                    android:paddingRight="@dimen/design_margin"
+                    android:text="@string/my_member"
+                    android:textColor="@color/comm_text_color_black"
+                    android:textSize="@dimen/comm_text_size_h" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/design_margin">
+
+                    <com.reslibrarytwo.HnSkinTextView
+                        android:id="@+id/tv_my_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:drawableRight="@mipmap/more_list"
+                        android:paddingRight="@dimen/design_margin"
+                        android:text="@string/my_account"
+                        android:textColor="@color/black_tran"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/mRlInVite"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/mTvInvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/design_margin"
+                        android:text="@string/invite_have_gift"
+                        android:textColor="@color/comm_text_color_black"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="@dimen/design_margin"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableRight="@mipmap/more_list"
+                        android:singleLine="true"
+                        android:text="@string/now_invite"
+                        android:textColor="@color/comm_text_color_black_s"
+                        android:textSize="@dimen/comm_text_size" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mRlSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/mTvSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/design_margin"
+                        android:text="@string/my_sign_in"
+                        android:textColor="@color/comm_text_color_black"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+                    <ImageView
+                        android:id="@+id/mIvSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_toRightOf="@id/mTvSign"
+                        android:visibility="gone"
+                        android:src="@mipmap/live_red_dian" />
+
+                    <TextView
+                        android:id="@+id/mTvSignState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="@dimen/design_margin"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableRight="@mipmap/more_list"
+                        android:singleLine="true"
+                        android:text="@string/now_invite"
+                        android:textColor="@color/comm_text_color_black_s"
+                        android:textSize="@dimen/comm_text_size" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/design_margin">
+
+                    <com.reslibrarytwo.HnSkinTextView
+                        android:id="@+id/tv_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="@string/help_feddback"
+                        android:textColor="@color/black_tran"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="@dimen/design_margin"
+                        android:src="@mipmap/more_list"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/design_margin">
+
+                    <com.reslibrarytwo.HnSkinTextView
+                        android:id="@+id/tv_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="@string/set"
+                        android:textColor="@color/black_tran"
+                        android:textSize="@dimen/comm_text_size_h" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="@dimen/design_margin"
+                        android:src="@mipmap/more_list"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.hn.library.loadstate.HnLoadingLayout>
+
+

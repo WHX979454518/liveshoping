@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cus_padding">
+
+        <TextView
+            style="@style/comm_text"
+            android:layout_weight="1"
+            android:id="@+id/mTvName"
+            android:text="帅哒哒" />
+
+        <TextView
+            style="@style/comm_text"
+            android:id="@+id/mTvPhone"
+            android:text="13444916354" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:id="@+id/mTvAddress"
+        android:paddingRight="16dp"
+        android:textColor="@color/comm_text_color_black_s"
+        android:singleLine="false"
+        android:text="帅哒哒啊打电话空间啊啥的看见啊说的看见啊是的空间撒花 撒开就是的撒看接电话" />
+
+    <View style="@style/home_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cus_padding">
+
+
+        <CheckBox
+            android:id="@+id/mBoxAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:button="@null"
+            android:text="  默认地址"
+            android:textColor="@color/comm_text_color_black"
+            android:drawableLeft="@drawable/sel_apply_back" />
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_stoke_gray_30"
+            android:paddingBottom="4dp"
+            android:id="@+id/mTvEdit"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:text="编辑"
+            android:textColor="@color/comm_text_color_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/shape_stoke_red_30"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:id="@+id/mTvDelete"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:text="删除"
+            android:textColor="@color/comm_text_color_red" />
+
+    </LinearLayout>
+
+</LinearLayout>

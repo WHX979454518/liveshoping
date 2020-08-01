@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_buy_tips_layout"
+                android:visibility="gone"
+                android:text="开团24小时内成功，商家发货；若人数不足导致开团失败，系统则自动退款关闭订单"
+                android:textColor="#ffffac20"
+                android:background="#fffff3e0"
+                android:paddingRight="@dimen/dp_24"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/mLLAddress"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/cus_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mTvGetName"
+                        style="@style/comm_text"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/mTvNone"
+                        style="@style/comm_text"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="请选择地址"
+                        android:textColor="@color/comm_text_color_black_s" />
+
+                    <TextView
+                        android:id="@+id/mTvGetPhone"
+                        style="@style/comm_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mLlGetAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/positioning_black" />
+
+                    <TextView
+                        android:id="@+id/mTvGetAddress"
+                        style="@style/comm_text"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/design_margin_top"
+                        android:maxLines="2"
+                        android:singleLine="false"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/address_bar" />
+
+            <View style="@style/home_empty_bg" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View style="@style/home_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/comm_text"
+            android:text="总计：" />
+
+        <TextView
+            style="@style/comm_text"
+            android:text="¥"
+            android:textColor="@color/comm_text_color_red"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mTvAllMoney"
+            style="@style/comm_text"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="8dp"
+            android:text="0"
+            android:textColor="@color/comm_text_color_red"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mTvCommit"
+            style="@style/comm_text"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/main_color"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/comm_text_color_black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/mIvGoodsIco"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="8dp"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/default_live_head"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/mTvGoodsName"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:lines="3"
+                android:singleLine="false"
+                tools:text="asda打扫打扫阿萨莎莎的阿萨莎莎阿萨斯傻傻傻的阿萨德阿萨德说的地方方法assad阿萨德阿萨斯的阿萨斯阿萨德阿萨德阿萨斯打撒的撒的阿萨斯的阿萨斯的阿萨斯的撒的撒的" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mLLTag1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/comm_text"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="退款类型"
+                android:textColor="@color/comm_text_color_black_hs" />
+
+            <LinearLayout
+                android:id="@+id/mLLOnce"
+                style="@style/cus_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:onClick="onApplyBackClick">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="仅退款" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:text="(未收到货包含未签收或卖家协商同意下)"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/mBoxOnce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sel_apply_back"
+                    android:button="@null"
+                    android:checked="true"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <View
+                style="@style/home_line"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:id="@+id/mLLBoth"
+                style="@style/cus_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:onClick="onApplyBackClick">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="退货退款" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="(已收到货，需要退换已收到的货物)"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/mBoxBoth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sel_apply_back"
+                    android:button="@null"
+                    android:checked="false"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <View style="@style/home_empty_bg" />
+
+            <LinearLayout
+                style="@style/cus_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="退款金额" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="¥"
+                    android:textColor="@color/comm_text_color_red"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/mTvMoney"
+                    style="@style/comm_text"
+                    android:gravity="right"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textColor="@color/comm_text_color_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="最大退款金额"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="12sp" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="right"
+                    android:text="¥"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mTvMaxMoney"
+                    style="@style/comm_text"
+                    android:layout_marginLeft="4dp"
+                    android:paddingRight="16dp"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:text="退款数量"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/mIvMin"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:onClick="onApplyBackClick"
+                    android:src="@drawable/shopping_cart_minus" />
+
+                <TextView
+                    android:id="@+id/mTvNum"
+                    style="@style/comm_text"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/shape_cart"
+                    android:gravity="center"
+                    android:minWidth="40dp"
+                    android:text="0"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/mIvAdd"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:onClick="onApplyBackClick"
+                    android:src="@drawable/shopping_cart_addition" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mLLTag2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View style="@style/home_empty_bg" />
+
+            <LinearLayout
+                style="@style/cus_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:onClick="onApplyBackClick">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="退款类型" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="仅退款" />
+            </LinearLayout>
+
+            <View style="@style/home_line" />
+
+            <LinearLayout
+                style="@style/cus_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="退款金额" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:text="¥"
+                    android:gravity="right"
+                    android:textColor="@color/comm_text_color_red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mTvMoney2"
+                    style="@style/comm_text"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="@color/comm_text_color_red" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <View
+                style="@style/home_line"
+                android:layout_marginLeft="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/comm_text"
+                    android:text="退款说明" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_marginLeft="8dp"
+                    android:text="选填，最多不超过50字"
+                    android:textColor="@color/comm_text_color_black_s"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/mEdMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="选填，最多不超过50字"
+                android:maxLength="50"
+                android:minHeight="80dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/comm_text_color_black_hs"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mTvApply"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_soild_main_30"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:onClick="onApplyBackClick"
+            android:text="提交申请"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

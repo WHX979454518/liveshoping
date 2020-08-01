@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="短视频"
+            android:textColor="#ff1a1a1a"
+            android:textSize="17sp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <com.hn.library.tab.SlidingTabLayout
+        android:id="@+id/little_video_mSlidingTab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="?attr/item_bg_color"
+        tl:tl_divider_color="#1Affffff"
+        tl:tl_divider_padding="16dp"
+        tl:tl_indicator_color="@color/main_color"
+        tl:tl_indicator_height="2dp"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_padding="@dimen/design_margin"
+        tl:tl_tab_space_equal="false"
+        tl:tl_textSelectColor="#ff333333"
+        tl:tl_textUnselectColor="#ffb3b3b3"
+        tl:tl_textsize="@dimen/comm_text_size_h"
+        tl:tl_underline_color="#1Affffff"
+        tl:tl_underline_height="0dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/home_line"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/little_video_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+</LinearLayout>

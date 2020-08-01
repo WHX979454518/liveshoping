@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp">
+
+
+    <CheckBox
+        android:id="@+id/mBoxStore"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/sel_goods_car"
+        android:button="@null"
+        android:checked="true"
+        android:enabled="true" />
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="90dp">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvImg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live_head"
+        app:placeholderImageScaleType="centerCrop"
+        />
+        <View
+            android:id="@+id/mViewTag"
+            android:layout_width="match_parent"
+            android:background="#41000000"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTvGoodsName"
+            style="@style/comm_text"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:singleLine="false"
+            android:text="asdasdasdassdassdasasdasdasd啊傻傻大啊傻傻大叔大" />
+
+        <TextView
+            android:id="@+id/mTvMsg"
+            style="@style/comm_text"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:text="Adasdsadasd阿萨斯打撒的撒打算撒打算撒打算撒的阿萨斯的爱大师打撒的"
+            android:textColor="@color/comm_text_color_black_hs" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="¥"
+                android:id="@+id/mTvUnit"
+                android:textColor="@color/comm_text_color_red"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/comm_text"
+                android:id="@+id/mTvMoney"
+                android:layout_marginLeft="2dp"
+                android:text="100000"
+                android:textColor="@color/comm_text_color_red"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/mIvMin"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="8dp"
+                android:onClick="onApplyBackClick"
+                android:src="@drawable/shopping_cart_minus" />
+
+            <TextView
+                android:id="@+id/mTvNum"
+                style="@style/comm_text"
+                android:layout_height="28dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_cart"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/mIvAdd"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="8dp"
+                android:onClick="onApplyBackClick"
+                android:src="@drawable/shopping_cart_addition" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

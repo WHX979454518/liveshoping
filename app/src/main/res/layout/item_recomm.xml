@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="4dp"
+    android:layout_height="wrap_content">
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvIco"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live"
+        app:placeholderImageScaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:id="@+id/mTvPrice"
+        android:textColor="@color/comm_text_color_black"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:text="1231231231223123122312231223213"
+        android:layout_height="20dp" />
+
+</LinearLayout>

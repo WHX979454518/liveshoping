@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:layout_marginTop="@dimen/dp_20"
+    android:layout_marginBottom="@dimen/dp_15">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="#EAEAEA" />
+
+    <com.hn.library.view.FrescoImageView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/start_group_person_head"
+        android:layout_width="@dimen/dp_31"
+        android:layout_height="@dimen/dp_31"
+        android:layout_centerVertical="true"
+        android:src="@drawable/example_head_img"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/default_live_head"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true" />
+
+
+    <TextView
+        android:id="@+id/start_group_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:maxLines="1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/start_group_person_head"
+        android:text="迪迦奥特曼"
+        android:textColor="#ff666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/group_person_add_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="2019年06月13日 21:26:41开团"
+        android:textColor="#ffaaaaaa"
+        android:textSize="12sp" />
+
+</RelativeLayout>

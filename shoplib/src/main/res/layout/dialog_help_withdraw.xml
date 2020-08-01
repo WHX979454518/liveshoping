@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="vertical"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_white_radius_4"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/comm_text"
+            android:id="@+id/mTvTitle"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text="提现规则" />
+
+        <WebView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/mWebView"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mIvBack"
+        android:src="@drawable/identity_card_closure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

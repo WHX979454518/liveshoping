@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+        android:id="@+id/main_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/item_bg_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.hn.library.view.ImageTextButton
+            android:id="@+id/ib_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            app:iDivider="1.5dp"
+            app:iconId="@mipmap/shop_un_selected"
+            app:iconSize="25dp"
+            app:text="@string/main_shop"
+            app:textColor="@color/main_color" />
+
+        <com.hn.library.view.ImageTextButton
+            android:id="@+id/ib_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:iDivider="1.5dp"
+            app:iconId="@mipmap/little_movie_un_selected"
+            app:iconSize="25dp"
+            app:text="@string/main_little_video"
+            app:textColor="@color/color_999999" />
+
+
+            <com.hn.library.view.ImageTextButton
+                android:id="@+id/mIvLive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:iDivider="1.5dp"
+                app:iconId="@mipmap/live_un_selected"
+                app:iconSize="25dp"
+                app:text="@string/main_live"
+                app:textColor="@color/color_999999" />
+        <com.hn.library.view.ImageTextButton
+            android:id="@+id/ib_car"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:iDivider="1.5dp"
+            app:iconId="@mipmap/source_un_selected"
+            app:iconSize="25dp"
+            app:text="@string/main_source"
+            app:textColor="@color/color_999999" />
+
+        <com.hn.library.view.ImageTextButton
+            android:id="@+id/ib_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:iDivider="1.5dp"
+            app:iconId="@mipmap/mine_un_selected"
+            app:iconSize="25dp"
+            app:text="@string/main_mine"
+            app:textColor="@color/color_999999" />
+
+    </LinearLayout>
+
+        <View
+        android:id="@+id/view"
+        style="@style/home_line"
+        android:layout_above="@id/main_bar" />
+
+        <FrameLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/main_bar"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/mTvSign"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@id/main_bar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/toast_sign"
+            android:gravity="center"
+            android:text="你今天还没有签到"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

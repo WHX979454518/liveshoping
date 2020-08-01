@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mLLGoodsItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingBottom="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp">
+
+    <CheckBox
+        android:id="@+id/mBoxSel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:button="@null"
+        android:drawableLeft="@drawable/sel_goods_car"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:textSize="14sp" />
+
+    <com.hn.library.view.FrescoImageView
+        android:id="@+id/mIvGoodsIco"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_live"
+        app:placeholderImageScaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTvGoodsName"
+            style="@style/comm_text"
+            android:maxLines="2"
+            android:singleLine="false"
+            tools:text="asssdasd阿萨斯的阿萨斯的阿萨斯的阿萨斯的阿萨德阿萨斯的阿萨德撒啊大asd" />
+
+
+        <TextView
+            android:id="@+id/mTvPrice"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:text="¥"
+            android:textSize="12sp"
+            tools:text="10000" />
+
+
+        <TextView
+            android:id="@+id/mTvGoodsMsg"
+            style="@style/comm_text"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/comm_text_color_black_s"
+            tools:text="asd" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

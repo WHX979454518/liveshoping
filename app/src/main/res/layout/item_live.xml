@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/live_item_bkg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp">
+
+        <com.hn.library.view.FrescoImageView
+            android:id="@+id/little_video_introduce_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/live_nearby_default"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundBottomLeft="false"
+            app:roundBottomRight="false"
+            app:roundTopLeft="true"
+            app:roundTopRight="true"
+            app:roundedCornerRadius="5dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@drawable/gray_bkg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/live_state"
+                android:background="@drawable/main_color_bkg"
+                android:padding="@dimen/dp_2"
+                android:text="•直播中"
+                android:textColor="#fffefefe"
+                android:textSize="@dimen/dp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:padding="@dimen/dp_2"
+                android:id="@+id/live_watch_person_number"
+                android:text="1132人观看"
+
+                android:textColor="#fffefefe"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_7"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8">
+
+            <com.hn.library.view.FrescoImageView
+                android:id="@+id/live_head_img"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                app:actualImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/moren"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundAsCircle="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/live_shop_name"
+                android:layout_toRightOf="@id/live_head_img"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="店铺的名称"
+                android:maxLines="1"
+                android:maxEms="6"
+                android:ellipsize="end"
+                android:textColor="#fffefefe"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/live_like_number"
+                android:text="1132"
+                android:textColor="#fffefefe"
+                android:textSize="12sp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_toLeftOf="@id/live_like_number"
+                android:src="@drawable/live_like_icon"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最时尚的搭配"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/live_title"
+        android:textColor="#ff333333"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:id="@+id/live_goods_name"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="甜美2019夏装新行T恤裙流行T恤19夏装新款流行T恤裙子仙女超仙森系新款流行T恤裙子仙女超仙森系polo连衣裙"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥9.80"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:id="@+id/live_goods_price"
+        android:textColor="#fff51a13"
+        android:textSize="13sp"
+        />
+</LinearLayout>

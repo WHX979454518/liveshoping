@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_bg">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="店铺名称"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdName"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:hint="请输入店铺名称"
+                android:text=""
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="店铺介绍"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdIntro"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:gravity="top"
+                android:singleLine="false"
+                android:hint="简单介绍下自己的小店吧~"
+                android:minHeight="64dp"
+                android:text=""
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="公告"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdAnno"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:hint="请输入店铺公告"
+                android:text=""
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="主营"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdMain"
+                style="@style/comm_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/design_margin_s"
+                app:content_length="5"
+                android:background="@null"
+                android:hint="主营关键字1"
+                android:text=""
+                android:maxLength="5"
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdMain2"
+                style="@style/comm_text"
+                android:layout_width="0dp"
+                app:content_length="5"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/design_margin"
+                android:background="@null"
+                android:hint="主营关键字2"
+                android:text=""
+                android:maxLength="5"
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="图片"
+                android:textColor="@color/comm_text_color_black" />
+
+            <TextView
+                style="@style/comm_text"
+                android:text="（店铺示例主图，最多可添加5张）"
+                android:textColor="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:id="@+id/mRlImg1"
+                android:layout_width="60dp"
+                android:onClick="onStoreEditClick"
+                android:layout_height="60dp"
+                android:layout_marginRight="4dp"
+                android:visibility="gone">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvIco1"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/default_live"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/mIvDelete1"
+                    android:onClick="onStoreEditClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete_picture" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlImg2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="4dp"
+                android:onClick="onStoreEditClick"
+                android:visibility="gone">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvIco2"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/default_live"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/mIvDelete2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onStoreEditClick"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete_picture" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlImg3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="4dp"
+                android:onClick="onStoreEditClick"
+                android:visibility="gone">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvIco3"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/default_live"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/mIvDelete3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onStoreEditClick"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete_picture" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlImg4"
+                android:layout_width="60dp"
+                android:layout_marginRight="4dp"
+                android:onClick="onStoreEditClick"
+                android:layout_height="60dp"
+                android:visibility="gone">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvIco4"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/default_live"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/mIvDelete4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onStoreEditClick"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete_picture" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mRlImg5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="4dp"
+                android:onClick="onStoreEditClick"
+                android:visibility="gone">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvIco5"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/default_live"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/mIvDelete5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onStoreEditClick"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete_picture" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/mIvAddImg"
+                android:layout_width="54dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:onClick="onStoreEditClick"
+                android:layout_height="54dp"
+                android:src="@drawable/add_photos" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <View
+                style="@style/home_line"
+                android:layout_marginLeft="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:text="视频"
+                android:textColor="@color/comm_text_color_black" />
+
+            <TextView
+                style="@style/comm_text"
+                android:text="（店铺宣传视频，最多10秒）"
+                android:textColor="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:id="@+id/mRlVideo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:onClick="onStoreEditClick"
+                android:visibility="gone">
+
+                <com.hn.library.view.FrescoImageView
+                    android:id="@+id/mIvVideo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/default_live"
+                    app:placeholderImageScaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#41000000">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/play" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/mIvDeleteVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onStoreEditClick"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete_picture" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/mIvAddVideo"
+                android:layout_width="70dp"
+                android:onClick="onStoreEditClick"
+                android:layout_height="70dp"
+                android:src="@drawable/add_photos" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:id="@+id/mLLAddress"
+            android:layout_height="wrap_content"
+            android:onClick="onStoreEditClick"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:layout_weight="1"
+                android:text="店铺地区"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <TextView
+                android:id="@+id/mTvAddress"
+                style="@style/comm_text"
+                android:layout_width="250dp"
+                android:drawableRight="@mipmap/more_list"
+                android:gravity="right|center_vertical"
+                android:text="省、市、区"
+                android:textColor="@color/comm_text_color_black_s"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <View
+                style="@style/home_line"
+                android:layout_marginLeft="16dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="详情地址"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdAddress"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:hint="输入详细地址"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <View
+                style="@style/home_line"
+                android:layout_marginLeft="16dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="联系电话"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdPhone"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:hint="为了不放过任何一个订单"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:text=""
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <View
+                style="@style/home_line"
+                android:layout_marginLeft="16dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/cus_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="70dp"
+                android:text="联系人"
+                android:textColor="@color/comm_text_color_black_s" />
+
+            <com.hn.library.view.HnEditText
+                android:id="@+id/mEdPerson"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:hint="留下店铺芳名"
+                android:maxLength="6"
+                android:text=""
+                android:textColor="@color/comm_text_color_black"
+                android:textColorHint="@color/comm_text_color_black_s" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
